@@ -28,7 +28,9 @@ is rendered as one heading spanning the width rather than as a row of blanks.
 """
 import json
 import os
+import re
 import sys
+from decimal import Decimal, ROUND_HALF_UP
 
 from bs4 import BeautifulSoup
 
@@ -47,6 +49,45 @@ def alignment(spec):
     if spec.get('align'):
         return spec['align']
     return ['left'] + ['right'] * (len(spec['columns']) - 1)
+
+
+def combined_row(spec):
+    """A case-weighted average of the rows above, as a total row.
+
+    The percentages are proportions of that row's own cases, so the honest way
+    to combine them is to weight each by its case count and divide by the total
+    — not to average the percentages, which would give a court with 11 cases
+    the same say as one with 118.
+
+    A "-" is not nought: it means there was nothing to report, so that row is
+    left out of both halves of the fraction for that column rather than being
+    counted as a zero and dragging the average down.
+    """
+    cfg = spec['combine']
+    label = cfg.get('label', 'Combined')
+    wcol = cfg.get('weight_column', 1)
+    rows = [r for r in spec['rows'] if not is_section(r)]
+
+    def num(cell):
+        m = re.match(r'^\s*(-?[\d.]+)\s*%?\s*$', str(cell))
+        return float(m.group(1)) if m else None
+
+    weights = [num(r[wcol]) or 0 for r in rows]
+    total = sum(weights)
+    out = [label]
+    for i in range(1, len(spec['columns'])):
+        if i == wcol:
+            out.append(f'{int(round(total))}')
+            continue
+        pairs = [(w, num(r[i])) for w, r in zip(weights, rows) if num(r[i]) is not None]
+        base = sum(w for w, _v in pairs)
+        if not base:
+            out.append('-')
+            continue
+        val = sum(w * v for w, v in pairs) / base
+        pct = '%' if str(rows[0][i]).strip().endswith('%') else ''
+        out.append(f'{int(Decimal(val).quantize(0, ROUND_HALF_UP))}{pct}')
+    return out
 
 
 def is_section(row):
@@ -123,8 +164,9 @@ def table_html(spec):
         band = not band
     out.append('  </tbody>')
 
-    if spec.get('foot'):
-        f = spec['foot']
+    foot = spec.get('foot') or (combined_row(spec) if spec.get('combine') else None)
+    if foot:
+        f = foot
         out.append('  <tfoot>')
         out.append('    <tr>' + f'<th scope="row" class="ta-{align[0]}">{esc(f[0])}</th>'
                    + ''.join(f'<td class="ta-{align[i]}">{esc(c)}</td>'
@@ -145,6 +187,8 @@ def check(name, spec):
             bad.append(f'row {i} has {len(r)} cells, not {n}')
     if spec.get('foot') and len(spec['foot']) != n:
         bad.append(f'foot has {len(spec["foot"])} cells, not {n}')
+    if spec.get('foot') and spec.get('combine'):
+        bad.append('has both a foot and a combine — pick one')
     for b in bad:
         print(f'  ! {name}: {b}')
     return not bad
