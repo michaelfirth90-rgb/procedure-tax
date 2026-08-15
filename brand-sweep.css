@@ -62,11 +62,25 @@ html[data-title-sweep="a"] {
    in ten back on one line; --title-off stops being used and the auto margins
    land the box within 1px of where it sits now.                            */
 
+/* The padding-bottom with an equal negative margin is not decoration. With
+   background-clip: text the gradient is only painted inside the element's
+   background box, and .page-title is `font: bold 37px/42px` — five pixels of
+   leading for a 37px face. Brandon Grotesque's descenders drop below that line
+   box, so the tails of g, p, y and q fell outside the painted area and came out
+   sliced off. Reproduced by forcing a tight line box and measured: the glyphs
+   overhung the box by 5px and 5px of them went unpainted.
+
+   The padding extends the painted area downward; the negative margin takes the
+   same amount back out of the layout, so nothing below moves. Same trick
+   5_brand.py uses horizontally for the italic in the masthead, turned 90
+   degrees. 0.25em is about 9px at this size, comfortably past any descender. */
 .page-title {
   width: fit-content;
   max-width: min(100%, 680px);
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 0.25em;
+  margin-bottom: -0.25em;
   text-wrap: balance;
   background-image: var(--title-sweep);
   -webkit-background-clip: text;
@@ -84,13 +98,17 @@ html[data-title-sweep="a"] {
    glyphs overhang the inline box, so without it the tail of "Handbook" comes
    out half-painted.                                                        */
 
+/* Same again, and the masthead is worse: 29px type on a 31.9px line box is
+   under three pixels of leading. The horizontal padding is for the italic's
+   overhang, the vertical for the descenders in "Appeals" and "Compliance". */
 .site-title__main,
 .site-title__sub {
   width: fit-content;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 0.16em;
+  padding: 0.06em 0.16em 0.22em;
+  margin-bottom: -0.22em;
   background-image: var(--title-sweep);
   -webkit-background-clip: text;
           background-clip: text;
@@ -110,7 +128,7 @@ html[data-title-sweep="a"] {
     transform: translateX(-50%);
   }
 }
-.site-title__main { margin-bottom: 0; }
+.site-title__main { margin-bottom: -0.22em; }
 .site-title__sub  { text-decoration: none; }
 .site-title__sub:hover { text-decoration: underline; text-decoration-color: #2FAA47; }
 

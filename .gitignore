@@ -14,3 +14,6 @@ pinegrow.json
 .AppleDouble
 Icon?
 ._*
+
+# Pre-sweep snapshot — kept on disk, not published.
+_backup-before-sweep/
