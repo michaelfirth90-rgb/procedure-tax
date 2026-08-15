@@ -1,0 +1,128 @@
+/* =======================================================================
+   procedure.tax — one colour per Part.
+
+   Seven hues. The starting order came from searching all 5,040 orderings for
+   the one that maximised the worst ADJACENT pair; Parts 4/6 and 3/7 were then
+   swapped by hand and re-validated. Current worst adjacent separation, measured
+   on the ANCHORS: ΔE 10.1 under protanopia (gate 8) and 21.4 under normal
+   vision (gate 15).
+
+   Note the row TINTS are far closer than the anchors — around ΔE 5-7 apart in
+   any ordering, because at L 0.925 the hues converge. The Part headers and
+   their rules are what separate the groups; the tints only reinforce.
+
+   Two rules hold the accessibility together, and both matter if you edit this:
+     1. TEXT NEVER WEARS THE ANCHOR. Labels use --ink (9.7:1 to 10.0:1 on the
+        row tint). The anchor is for rules, edges and hover fills only — the
+        teal and olive anchors sit below 4.5:1 on white.
+     2. COLOUR GROUPS, IT NEVER IDENTIFIES. Seven hues cannot be told apart
+        pairwise under colour blindness. Every row keeps its letter and every
+        Part keeps its name, so nothing depends on the hue alone.
+   ========================================================================== */
+
+:root {
+  --p1-anchor:#05893E; --p1-tint:#CCF2D2; --p1-wash:#E7FBEA; --p1-ink:#124020;
+  --p2-anchor:#2A69C3; --p2-tint:#D9E7FD; --p2-wash:#ECF5FF; --p2-ink:#1B355B;
+  --p3-anchor:#AD4586; --p3-tint:#FFDAEE; --p3-wash:#FFEFF7; --p3-ink:#50243E;   /* magenta — swapped with Part 7 */
+  --p4-anchor:#977E0D; --p4-tint:#F2E7BB; --p4-wash:#FBF5DE; --p4-ink:#423400;   /* olive  — swapped with Part 6 */
+  --p5-anchor:#7249AD; --p5-tint:#EAE1FD; --p5-wash:#F6F2FF; --p5-ink:#3C2B56;
+  --p6-anchor:#10A6AD; --p6-tint:#B9F3F5; --p6-wash:#DEFBFC; --p6-ink:#003E41;   /* teal   — swapped with Part 4 */
+  --p7-anchor:#C35327; --p7-tint:#FEDED4; --p7-wash:#FFF0EB; --p7-ink:#552615;   /* orange  — swapped with Part 3 */
+  /* Part 8 is the reports, not a doctrinal Part. Slate is deliberate: the hue
+     circle is full at seven, and a neutral says "different kind of thing"
+     rather than becoming a third blue. It clears both separation gates against
+     its only neighbour, Part 7 orange (ΔE 18.9 normal vision). */
+  --p8-anchor:#5E6A78; --p8-tint:#E0E7EF; --p8-wash:#F0F5FA; --p8-ink:#2D3640;
+
+  /* card edges — the 1px border on a shaded TOC group */
+  --p1-edge:#96CEA1; --p2-edge:#9CC0F5; --p3-edge:#E6A8CA; --p4-edge:#CFBE7E;
+  --p5-edge:#C6B2ED; --p6-edge:#77CFD3; --p7-edge:#EEAC94; --p8-edge:#B6BFC8;
+}
+
+/* every element that carries data-part picks up its Part's four values */
+[data-part="1"]{--anchor:var(--p1-anchor);--tint:var(--p1-tint);--wash:var(--p1-wash);--ink:var(--p1-ink);--edge:var(--p1-edge)}
+[data-part="2"]{--anchor:var(--p2-anchor);--tint:var(--p2-tint);--wash:var(--p2-wash);--ink:var(--p2-ink);--edge:var(--p2-edge)}
+[data-part="3"]{--anchor:var(--p3-anchor);--tint:var(--p3-tint);--wash:var(--p3-wash);--ink:var(--p3-ink);--edge:var(--p3-edge)}
+[data-part="4"]{--anchor:var(--p4-anchor);--tint:var(--p4-tint);--wash:var(--p4-wash);--ink:var(--p4-ink);--edge:var(--p4-edge)}
+[data-part="5"]{--anchor:var(--p5-anchor);--tint:var(--p5-tint);--wash:var(--p5-wash);--ink:var(--p5-ink);--edge:var(--p5-edge)}
+[data-part="6"]{--anchor:var(--p6-anchor);--tint:var(--p6-tint);--wash:var(--p6-wash);--ink:var(--p6-ink);--edge:var(--p6-edge)}
+[data-part="8"]{--anchor:var(--p8-anchor);--tint:var(--p8-tint);--wash:var(--p8-wash);--ink:var(--p8-ink);--edge:var(--p8-edge)}
+[data-part="7"]{--anchor:var(--p7-anchor);--tint:var(--p7-tint);--wash:var(--p7-wash);--ink:var(--p7-ink);--edge:var(--p7-edge)}
+
+/* ---- 1. Home page vertical contents menu -------------------------------- */
+
+/* the PART rows become named headers with a rule in their own colour */
+.contents-nav > ul > li.cn-part { height: auto; margin: 15px 0 4px; }
+.contents-nav > ul > li.cn-part:first-child { margin-top: 0; }
+.contents-nav > ul > li.cn-part > a {
+  height: auto;
+  padding: 0 0 3px;
+  background: none;
+  border-bottom: 2px solid var(--anchor);
+  font: 600 10.5px/1.4 var(--font-sans);
+  letter-spacing: .9px;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.contents-nav > ul > li.cn-part > a:hover { color: var(--anchor); }
+
+/* group rows take their Part's tint instead of the single pale green */
+.contents-nav > ul > li.contents-nav__group > a { background: var(--tint); color: var(--ink); }
+.contents-nav > ul > li.contents-nav__group > a:hover { background: var(--anchor); color: #fff; }
+
+/* the fly-out keeps the Part's wash so it reads as part of the same block */
+.contents-nav > ul > li.contents-nav__group > ul { background: var(--wash); }
+.contents-nav > ul > li.contents-nav__group > ul a { color: var(--ink); }
+.contents-nav > ul > li.contents-nav__group > ul a:hover { background: var(--tint); }
+
+/* ---- 2. Letter landing pages -------------------------------------------- */
+
+/* the rule goes above the contents list, not under the title — the title sits
+   in a narrow measured component and a rule under it would stop short */
+body[data-part] .part-menu { border-top: 3px solid var(--anchor); padding-top: 9px; }
+body[data-part] .part-menu--placed { border-top: 0; padding-top: 0; }
+body[data-part] .part-menu:not(.part-menu--placed) li:nth-child(even) a { background: var(--wash); }
+body[data-part] .part-menu a {
+  padding-left: 8px;
+  border-left: 4px solid transparent;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+body[data-part] .part-menu a:hover,
+body[data-part] .part-menu a:focus {
+  background: var(--tint);
+  border-left-color: var(--anchor);
+  color: var(--ink);
+}
+
+/* ---- 3. Part pages ------------------------------------------------------ */
+/* every group column on a Part page is ruled in that Part's colour */
+
+body[data-part] .part-menu--placed li:first-child a {
+  border-bottom: 2px solid var(--anchor);
+  border-left: 0;
+  padding-left: 0;
+  margin-bottom: 3px;
+  color: var(--ink);
+  font-weight: 600;
+}
+body[data-part] .part-menu--placed li:first-child a:hover { background: none; }
+
+/* ---- 4. Header drop-downs ----------------------------------------------- */
+/* each panel is tinted to the Part it belongs to, so the menu and the page
+   you land on agree */
+
+.main-nav li.has-menu[data-part] > .mega { border-top-color: var(--anchor); }
+.main-nav li.has-menu[data-part] > .mega .mega__group > a { color: var(--ink); }
+.main-nav li.has-menu[data-part] > .mega .mega__group li a:hover {
+  background: var(--wash);
+  color: var(--ink);
+}
+
+/* ---- 5. On-page contents card ------------------------------------------- */
+/* the shaded TOC groups at the top of a chapter page take their Part's wash,
+   so a page announces which Part it belongs to before you read a word */
+
+body[data-part] .tc-group { background: var(--wash); border-color: var(--edge); }
+body[data-part] .tc-list li::before { color: var(--anchor); }
+
+/* the docked rail stays unshaded by design — hairlines and indent do that work */

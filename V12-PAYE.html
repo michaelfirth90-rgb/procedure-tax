@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V12: PAYE | Procedure.Tax</title>
+<meta name="description" content="">
+<link rel="icon" href="https://static.wixstatic.com/media/3a5390_32cd9895492045bfbe897dd23754e6db~mv2.jpg/v1/fill/w_123,h_96,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Designer_edited.jpg" type="image/jpeg">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="proceduretax.css">
+<link rel="stylesheet" href="nav-menu.css">
+<link rel="stylesheet" href="nav-colour.css">
+</head>
+<body id="top" data-part="5">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="site-meta">
+      <p>&nbsp;&copy; 2026 by Michael Firth KC, Gray's Inn Tax Chambers</p>
+      <p>Contact: <a href="mailto:michael.firth@taxbar.com">michael.firth@taxbar.com</a></p>
+    </div>
+
+    <h1 class="site-title">
+      <span class="site-title__main">Procedure.Tax </span>
+      <a class="site-title__sub" href="index.html">Tax Compliance and Appeals Handbook</a>
+    </h1>
+
+    <div class="site-logo">
+      <img src="https://static.wixstatic.com/media/3a5390_32cd9895492045bfbe897dd23754e6db~mv2.jpg/v1/fill/w_123,h_96,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Designer_edited.jpg" alt="Procedure.tax" width="123" height="96">
+    </div>
+
+    <form class="site-search" action="search.html" method="get" role="search">
+      <span class="site-search__icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="5 5 14 14" focusable="false"><path fill="currentColor" d="m15.683 14.6 3.265 3.265a.2.2 0 0 1 0 .282l-.8.801a.2.2 0 0 1-.283 0l-3.266-3.265a5.961 5.961 0 1 1 1.084-1.084zm-4.727 1.233a4.877 4.877 0 1 0 0-9.754 4.877 4.877 0 0 0 0 9.754"></path></svg>
+      </span>
+      <input id="site-search-input" name="q" type="search" placeholder="Search..." aria-label="Search" autocomplete="off">
+    </form>
+  </div>
+
+  <nav class="main-nav" aria-label="Main">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="part-1-tax-compliance.html">PART 1: TAX COMPLIANCE</a></li>
+      <li><a href="part-2-tax-investigations.html">PART 2: TAX INVESTIGATIONS</a></li>
+      <li><a href="part-3-appeals-and-judicial-review.html">PART 3: APPEALS AND JUDICIAL REVIEW</a></li>
+      <li><a href="part-4-tax-tribunal-procedure.html">PART 4: TAX TRIBUNAL PROCEDURE</a></li>
+      <li><a href="part-5-collection-of-tax.html">PART 5: COLLECTION OF TAX</a></li>
+      <li><a href="part-6-penalties-and-criminal.html">PART 6: PENALTIES AND CRIMINAL</a></li>
+      <li><a href="part-7-professional-negligence.html">PART 7: PROFESSIONAL NEGLIGENCE</a></li>
+      <li><a href="2026-tax-litigation-report.html">2026 Tax Litigation Report</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page page--rail" style="padding-bottom:0px">
+    <aside class="toc-side" aria-label="Sections on this page">
+      <p class="ts-title">On this page</p>
+      <p class="ts-head"><a href="#shadowdirectorsareemployees">Shadow directors are employees</a></p>
+      <p class="ts-head"><a href="#territorialityofpayeobligations">Territoriality of PAYE obligations​</a></p>
+      <p class="ts-head"><a href="#employerliabletodeductinaccordancewithpayecode">Employer liable to deduct in accordance with PAYE code</a></p>
+      <p class="ts-head"><a href="#recoveryfromtheemployeewherenounderdeductionbyemployeremploy">Recovery from the employee where no under-deduction by employer (employee liable)</a></p>
+      <p class="ts-head"><a href="#recoveryofunderpaidpayefromemployerr80">Recovery of underpaid PAYE from employer (r.80)</a></p>
+      <p class="ts-head"><a href="#creditforamountspaidpayablebyemployer">Credit for amounts payable by employer</a></p>
+      <p class="ts-head"><a href="#payecreditamountnotwithinthescopeofordinaryappealagainstasse">PAYE credit amount not within the scope of ordinary appeal against assessment</a></p>
+      <p class="ts-cat"><a href="#denyingemployeecredit">DENYING EMPLOYEE CREDIT</a></p>
+      <p class="ts-head"><a href="#hmrcsgeneraldiscretiontoshiftliabilitytotheemployee">HMRC&#x27;s general discretion to shift liability to the employee</a></p>
+      <p class="ts-head"><a href="#generaldiscretionapproachtoexercise">General discretion: approach to exercise</a></p>
+      <p class="ts-head"><a href="#statutorydirectionsunderr72andr81">Statutory directions under r.72 and r.81</a></p>
+      <p class="ts-head"><a href="#regulation72direction">Regulation 72 direction</a></p>
+      <p class="ts-head"><a href="#conditionadirectionemployertookreasonablecare">Condition A direction (employer took reasonable care)</a></p>
+      <p class="ts-head"><a href="#conditionbdirectionemployeeknewemployerwilfullyfailedtodeduc">Condition B direction (employee knew employer wilfully failed to deduct)</a></p>
+      <p class="ts-head"><a href="#employerrequestforr72determination">Employer request for r.72 determination</a></p>
+      <p class="ts-head"><a href="#regulation81direction">Regulation 81 direction</a></p>
+      <p class="ts-head"><a href="#interplaybetweenr72r80andr81">Interplay between r.72, r.80 and r.81</a></p>
+      <p class="ts-head"><a href="#regulation72fdirectiontaxlikelyselfassessed">Regulation 72F direction (tax likely self-assessed)</a></p>
+      <p class="ts-head"><a href="#liabilityofmanagedservicecompanydirectorsandproviders">Liability of managed service company directors and providers</a></p>
+    </aside>
+    <div class="page__inner">
+    <h1 class="page-title" style="--title-w:325px; --title-off:329px"><span class="color_33" style="font-size:37px">V12: PAYE</span></h1>
+      <nav class="toc-card" style="margin-top:67px" aria-label="On this page">
+        <div class="tc-group">
+          <p class="tc-head"><a href="#shadowdirectorsareemployees">Shadow directors are employees</a></p>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#territorialityofpayeobligations">Territoriality of PAYE obligations​</a></p>
+          <ul class="tc-list">
+            <li><a href="#musthaveauktaxpresence">Must have a UK tax presence</a></li>
+            <li><a href="#voluntarysubmissiontopayeregimenotsufficient">Voluntary submission to PAYE regime not sufficient</a></li>
+          </ul>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#employerliabletodeductinaccordancewithpayecode">Employer liable to deduct in accordance with PAYE code</a></p>
+          <ul class="tc-list">
+            <li><a href="#notrequiredtotakeaccountofpayandtaxforpreviousyear">Not required to take account of pay and tax for previous year</a></li>
+            <li><a href="#electroniccommunicationofpayecode">Electronic communication of PAYE code</a></li>
+            <li><a href="#noobligationtodeductifcodenotproperlyserved">No obligation to deduct if code not properly served</a></li>
+            <li><a href="#deemedprovisionoflastyearscode">Deemed provision of last year’s code</a></li>
+          </ul>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#recoveryfromtheemployeewherenounderdeductionbyemployeremploy">Recovery from the employee where no under-deduction by employer (employee liable)</a></p>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#recoveryofunderpaidpayefromemployerr80">Recovery of underpaid PAYE from employer (r.80)</a></p>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#creditforamountspaidpayablebyemployer">Credit for amounts payable by employer</a></p>
+          <ul class="tc-list">
+            <li><a href="#creditforamountthatshouldhavebeendeductedevenifnotdeducted">Credit for amount that should have been deducted (even if not deducted)</a></li>
+            <li><a href="#directiontax">Direction tax</a></li>
+            <li><a href="#relevanttaxyear">Relevant tax year</a></li>
+            <li><a href="#taxtreatedasdeductedaddedunderr1855">Tax treated as deducted (added under r.185(5))</a></li>
+            <li><a href="#taxpayer">Taxpayer</a></li>
+            <li><a href="#nocreditforamountoverpaidbyemployerevenifemployeereimbursese2">No credit for amount overpaid by employer (even if employee reimburses employer)</a></li>
+            <li><a href="#buthmrcmayreimburseoverpaymenttoemployee">But HMRC may reimburse overpayment to employee:</a></li>
+            <li><a href="#nocreditforamountoverpaidbyemployerevenifemployeereimbursese">No credit for amount overpaid by employer (even if employee reimburses employer)</a></li>
+          </ul>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#payecreditamountnotwithinthescopeofordinaryappealagainstasse">PAYE credit amount not within the scope of ordinary appeal against assessment</a></p>
+        </div>
+        <p class="tc-cat"><a href="#denyingemployeecredit">DENYING EMPLOYEE CREDIT</a></p>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#hmrcsgeneraldiscretiontoshiftliabilitytotheemployee">HMRC&#x27;s general discretion to shift liability to the employee</a></p>
+          <ul class="tc-list">
+            <li><a href="#generaldiscretionnotsubjecttotherulesinthepayeregulations">General discretion not subject to the rules in the PAYE regulations</a></li>
+            <li><a href="#righttomakerepresentationsbeforepowerisexercised">Right to make representations before power is exercised</a></li>
+            <li><a href="#challengebywayofjudicialreview">Challenge by way of judicial review</a></li>
+            <li><a href="#canbeusedretrospectively">Can be used retrospectively</a></li>
+            <li><a href="#exerciseofdiscretionrelievesemployerofobligationtoaccount">Exercise of discretion relieves employer of obligation to account</a></li>
+            <li><a href="#andnocreditforemployee">And no credit for employee</a></li>
+          </ul>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#generaldiscretionapproachtoexercise">General discretion: approach to exercise</a></p>
+          <ul class="tc-list">
+            <li><a href="#focusisonnecessityorappropriatenessofemployerscompliancewith">Focus is on necessity or appropriateness of employer&#x27;s compliance with PAYE duty</a></li>
+          </ul>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#statutorydirectionsunderr72andr81">Statutory directions under r.72 and r.81</a></p>
+          <ul class="tc-list">
+            <li><a href="#distinctionbetweenr72andr81">Distinction between r.72 and r.81</a></li>
+            <li><a href="#effectofr72andr81determinations">Effect of r.72 and r.81 determinations</a></li>
+          </ul>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#regulation72direction">Regulation 72 direction</a></p>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#conditionadirectionemployertookreasonablecare">Condition A direction (employer took reasonable care)</a></p>
+          <ul class="tc-list">
+            <li><a href="#reasonablecare">Reasonable care</a></li>
+          </ul>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#conditionbdirectionemployeeknewemployerwilfullyfailedtodeduc">Condition B direction (employee knew employer wilfully failed to deduct)</a></p>
+          <ul class="tc-list">
+            <li><a href="#paymentofsalarywhencompanyhasinsufficientfundstoaccountforpa">Payment of salary when company has insufficient funds to account for PAYE</a></li>
+            <li><a href="#switchingfromdividendstosalaryatatimeoffinancialstressindica">Switching from dividends to salary at a time of financial stress indicates wilful</a></li>
+            <li><a href="#notwilfulwheredirectortakingstepstoavoidadministrationandrea">Not wilful where director taking steps to avoid administration and reasonably believed lender would accept</a></li>
+          </ul>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#employerrequestforr72determination">Employer request for r.72 determination</a></p>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#regulation81direction">Regulation 81 direction</a></p>
+          <ul class="tc-list">
+            <li><a href="#burdenofproofonthetaxpayer">Burden of proof on the taxpayer</a></li>
+          </ul>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#interplaybetweenr72r80andr81">Interplay between r.72, r.80 and r.81</a></p>
+          <ul class="tc-list">
+            <li><a href="#regulation72directionhasnoeffectinrelationtopayedeterminedun">Regulation 72 direction has no effect in relation to PAYE determined under r.80</a></li>
+            <li><a href="#nopointinemployerseekingar72directionafterr80determination">No point in employer seeking a r.72 direction after r.80 determination</a></li>
+            <li><a href="#onlyremedywouldbejudicialreviewofthedecisiontomakear80determ">Only remedy would be judicial review of the decision to make a r.80 determination</a></li>
+            <li><a href="#orhmrccanbeorderedtovacater80determination">Or: HMRC can be ordered to vacate r.80 determination</a></li>
+            <li><a href="#powertowithdrawr80determinationmatterforjudicialreview">Power to withdraw r.80 determination matter for judicial review</a></li>
+          </ul>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#regulation72fdirectiontaxlikelyselfassessed">Regulation 72F direction (tax likely self-assessed)</a></p>
+          <ul class="tc-list">
+            <li><a href="#conditionaamountliabletodeductexceedsamountdeducted">Condition A: amount liable to deduct exceeds amount deducted</a></li>
+            <li><a href="#conditionbamountrequiredtoaccountforonnotionalpaymentsexceed">Condition B: amount required to account for on notional payments exceeds amount accounted for</a></li>
+            <li><a href="#conditionctaxincludedinr80determinationbutunpaid">Condition C: tax included in r.80 determination but unpaid</a></li>
+            <li><a href="#triggerevents">Trigger events</a></li>
+            <li><a href="#meaningofselfassessed">Meaning of self-assessed</a></li>
+            <li><a href="#interplaybetweenr72fandr80">Interplay between r.72F and r.80</a></li>
+            <li><a href="#formandeffectofr72fdirection">Form and effect of r.72F direction</a></li>
+            <li><a href="#employeeappealagainstr72fdirection">Employee appeal against r.72F direction</a></li>
+          </ul>
+        </div>
+        <div class="tc-group">
+          <p class="tc-head"><a href="#liabilityofmanagedservicecompanydirectorsandproviders">Liability of managed service company directors and providers</a></p>
+          <ul class="tc-list">
+            <li><a href="#exclusionforadvisersandplacers">Exclusion for advisers and placers</a></li>
+            <li><a href="#definitions">Definitions</a></li>
+            <li><a href="#stilladirectorevenifindividualdidnotpaymuchattentiontoappoin">Still a director even if individual did not pay much attention to appointment</a></li>
+            <li><a href="#neednotbeacurrentdirector">Need not be a current director</a></li>
+            <li><a href="#companywithnoformaldirectorssoleshareholderisdirector">Company with no formal directors: sole shareholder is director</a></li>
+            <li><a href="#hmrcpower">HMRC power</a></li>
+            <li><a href="#hmrcmustserveatransfernotice">HMRC must serve a transfer notice</a></li>
+            <li><a href="#timelimitforservingtransfernotice">Time limit for serving transfer notice</a></li>
+            <li><a href="#powertoacceptloweramount">Power to accept lower amount</a></li>
+            <li><a href="#onlypost6january2008debts">Only post 6 January 2008 debts</a></li>
+            <li><a href="#limitedforpersonwhoencouragedorwereinvolvedinprovisionbymsco">Limited for person who encouraged or were involved in provision by MSC of services of individual</a></li>
+            <li><a href="#appealagainsttransfernotice">Appeal against transfer notice</a></li>
+            <li><a href="#timelimit30days">Time limit: 30 days</a></li>
+            <li><a href="#groundsofappeal">Grounds of appeal</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="anchor" id="shadowdirectorsareemployees"></div>
+      <div class="rich-text" style="margin-top:61px">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal">Shadow directors are employees</h2>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">“…we have concluded that Mr Rangos was the driving force behind TT.  He decided to set up TT after the collapse of GMT, he was integral to the business, controlled its bank accounts and decided how it would operate.  Apart from his own testimony, which we have not accepted, Mr Rangos produced no evidence to show that he was not a shadow director and employee of TT and TO.  Accordingly, we find that Mr Rangos was a shadow director and employee of TT and TO.” <span style="color:#8B0000">(Rangos v. HMRC [2015] UKFTT 262 (TC), §57).</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="color:#8B0000">​</span></p>
+      </div>
+      <div class="anchor" id="territorialityofpayeobligations"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Territoriality of PAYE obligations</span>​</h2>
+        <h3 class="font_3" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"> </h3>
+      </div>
+      <div class="anchor" id="musthaveauktaxpresence"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal">- Must have a UK tax presence</h3>
+        <h3 class="font_3" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal">​</h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">"[30] We simply note at this stage that the features that led the House of Lords to hold that the taxpayer company in Clark (Inspector of Taxes) v Oceanic Contractors Inc <a href="https://www.bailii.org/cgi-bin/redirect.cgi?path=/uk/cases/UKHL/1982/TC_56_183.html" target="_blank" rel="noreferrer noopener"><span style="text-decoration:underline">[1983] 2 AC 130</span></a> had a UK presence are absent: the Claimants have not said that the offshore Employers themselves had a UK office or postal address and there is no evidence of either. Rather, they have asserted in writing that "providing a workforce in the UK to UK based end-users" may mean that the offshore Employers have a UK taxable presence that brought them within the PAYE regime." <a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a></p>
+        <h3 class="font_3" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"> </h3>
+      </div>
+      <div class="anchor" id="voluntarysubmissiontopayeregimenotsufficient"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal">- Voluntary submission to PAYE regime not sufficient</h3>
+        <h3 class="font_3" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"> </h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">"[90] In oral argument Mr Mullan suggested, for the first time, that the voluntary operation of PAYE by the Employers in respect of the small salary element of the contractors' earnings meant that the Employers had surrendered to the jurisdiction of the PAYE regime. Mr Mullan produced no authority to support this novel contention. Clark v Oceanic does not provide any support for this proposition: it sets out the relevant test as whether there is a trading presence in the UK. There is no evidence that the Employers had a UK tax presence applying this test. The arrangements depended on the use of UK based intermediaries, and absent evidence, it certainly cannot be assumed that the offices and postal addresses of such intermediaries could be treated as those of the Employers. No positive case has otherwise been advanced. Despite their voluntary operation of PAYE on part of the earnings, no doubt to lend respectability to the arrangements, we can see no foundation for any suggestion that the PAYE Regulations did in fact apply to them. Accordingly, this argument is without any merit either." <a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a></p>
+        <h3 class="font_3" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="color:#8B0000; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal; text-decoration:underline; letter-spacing:normal">​</span></h3>
+      </div>
+      <div class="anchor" id="employerliabletodeductinaccordancewithpayecode"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Employer liable to deduct in accordance with PAYE code</span></h2>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“(1) On making a relevant payment to an employee during a tax year, an employer must deduct or repay tax in accordance with the PAYE regulations by reference to the employee's code, if the employer has one for the employee." </span><span style="color:#2E10EB; letter-spacing:normal">(SI 2003/2682 r.21(1))</span></p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“A code is issued to an employer if it is contained in a document that is sent—</span><br><span style="letter-spacing:normal">
+(a) to the employer, or</span><br><span style="letter-spacing:normal">
+(b) to a person acting on behalf of the employer, </span><br><span style="letter-spacing:normal">
+by HMRC, and any code so issued is received by the employer for the purposes of these Regulations.” </span><span style="color:#2E10EB; letter-spacing:normal">(r.8(2))</span></p>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="notrequiredtotakeaccountofpayandtaxforpreviousyear"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- Not required to take account of pay and tax for previous year</span></h3>
+        <p class="font_9" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">"[46] We agree with, and adopt, Judge Redston's analysis of the Regulations about codes at paragraphs 50 to 59 of Sci-Temps. In particular, we agree with her conclusion at paragraph 57 to the effect that:</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">"57. The above provisions require the employer to use the 'code' provided by HMRC when making any payment of earnings to an employee. It is clear from Regs 1, 7 and 8 that the 'code' is 'a combination of letters, numbers or both' or 'one of the special codes, whether expressed in words or represented by a combination of letters, numbers or both'. The information about 'previous pay and tax details' is not part of the 'code'".</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">...</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">[52] We find that the appellant did use the tax codes furnished to them by HMRC and thus complied with the Regulations in that regard." <a href="https://www.bailii.org/uk/cases/UKFTT/TC/2025/T09634.html" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline">(Fieldworkhub Ltd v. HMRC [2025] UKFTT 1097 (TC), Judge Anne Scott)</span></a></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">"[6]...(1)          Reg 68 only applies to employers who are not required to operate Real Time Information (“RTI”).  The Company was an RTI employer.  HMRC are able to issue Reg 80 determinations to RTI employers, but the legal requirements are different. The determination issued to the Company was therefore invalid;</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">(2)          Even had that not been the position, the Company had not failed to comply with its obligation to operate the “code” issued in respect of Ms A, as HMRC contended.  In the PAYE Regs “code” is a defined term, namely “a combination of letters, numbers or both” or “one of the special codes, whether expressed in words or represented by a combination of letters, numbers or both”.  The information about previous pay is not part of the code.  HMRC provided no statutory basis to support their case that, in addition to operating the code, an employer also has a legal obligation to include in its deductions working sheet, the employee’s pay and tax for a previous tax year.  From my own review of the regulations, I identified two situations where that was the position, but neither was relevant on the facts of this case." </span><a href="https://www.bailii.org/uk/cases/UKFTT/TC/2020/TC07796.html" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(Sci-Temps Ltd v. HMRC [2020] UKFTT 314 (TC), Judge Redston)</span></a></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="electroniccommunicationofpayecode"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:normal; letter-spacing:normal"><span style="font-size:20px; letter-spacing:normal">- </span><span style="letter-spacing:normal">Electronic communication of PAYE code</span></h3>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“(2) Instead of sending a document to the employer or (where relevant) the employer's agent, the requirements of the regulation may be complied with by the Inland Revenue arranging for the information it would contain to be delivered to the employer or (where relevant) the employer's agent by an approved method of electronic communications if so indicated in column 4.” </span><span style="color:#2E10EB; letter-spacing:normal">(r.213(2))</span></p>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Consent required:</span></h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“(4) But the Inland Revenue may only deliver information by an approved method of electronic communications if the employer or employer's agent (as the case may be) has consented to delivery of information in that way, and the Inland Revenue have not been notified that the consent has been withdrawn.” </span><span style="color:#2E10EB; letter-spacing:normal">(r.213(4))</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“We find that the presumption of delivery of the revised coding notice has been rebutted in this case by:</span><br><span style="letter-spacing:normal">
+(1)   The absence of consent to use the electronic form of communication by Raffingers Stuart or the Appellant…” </span><span style="color:#8B0000; letter-spacing:normal">(Cos Systems Ltd v. HMRC [2017] UKFTT 168 (TC), §15, Judge Gething).</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“Contrary to HMRC's submission the means of communication of the code may well be relevant. If consent has not been given for the purposes of Regulation 213(4) then a code which has been sent via such means is not an "employee's code" for the purposes of the regulations. Treating the code as an operative code which triggered the obligation to deduct even if consent had not been given would render the requirement for consent to be meaningless. The Regulation 80 determination in this case is predicated on there having been a liability to deduct in accordance with a particular code. If no such code was sent for the purposes of the regulations (noting that Regulation 8(2) deems a code which is sent to have been received) then there can have been no liability to deduct. The issue, in contrast to the prior one, is not of the process by which tax payable is determined but a pre-condition to the liability arising in the first place.” </span><span style="color:#8B0000; letter-spacing:normal">(Pendergate Ltd (t/a Ridgecrest Cleaning Services) v. HMRC [2016] UKFTT 778 (TC), §45, Judge Raghavan).</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Not necessarily provided by registering for PAYE online services:</span></h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“The note tells the reader they will receive statutory notices over the internet but it does not tell them in sufficiently clear terms that they will be taken to have agreed to receive notices which are operative for PAYE deduction purposes by internet only. Read in combination with the second paragraph it is also left unclear whether, if someone were to contact the Online Services helpdesk and asked to continue receiving PAYE notices this would mean the electronic notices would stop, or whether the employer would receive both paper and electronic notices. In circumstances where paper codes and notifications continue to be received from an employer's point of view it is left ambiguous which are the operative codes which would first serve to trigger the employer's deduction obligation.” </span><span style="color:#8B0000; letter-spacing:normal">(Pendergate Ltd (t/a Ridgecrest Cleaning Services v. HMRC [2016] UKFTT 778 (TC), §51, Judge Raghavan).</span></p>
+      </div>
+      <div class="anchor" id="noobligationtodeductifcodenotproperlyserved"></div>
+      <div class="rich-text" style="margin-top:10px">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:normal; letter-spacing:normal"><span style="font-size:20px; letter-spacing:normal">- </span><span style="letter-spacing:normal">No obligation to deduct if code not properly served</span></h3>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="font-size:15px; letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“It follows from the above conclusions that the PAYE codes for employees H and C for 2010-11 which were purportedly issued were not operative. The Regulation 80 determinations of "tax payable" were founded on an obligation to deduct which did not arise. No alternative basis having been put forward to support the Regulation 80 determination my decision is that the Regulation 80 determinations overcharge the appellant and that they should be reduced to zero.” </span><span style="color:#8B0000; letter-spacing:normal">(Pendergate Ltd (t/a Ridgecrest Cleaning Services v. HMRC [2016] UKFTT 778 (TC), §57, Judge Raghavan).</span></p>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="font-size:15px; letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="deemedprovisionoflastyearscode"></div>
+      <div class="rich-text" style="margin-top:12px">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:normal; letter-spacing:normal"><span style="font-size:20px">- </span><span style="font-size:20px; letter-spacing:normal">Deemed provision of last year’s code</span></h3>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“(2) If for any tax year the employer does not receive a code for an employee who was in that employer's employment on the previous 5th April, the code which applied on that date is treated as having been issued by the Inland Revenue for the tax year in question.” </span><span style="color:#2E10EB; letter-spacing:normal">(r.16(2))</span></p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="color:#2E10EB; letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="recoveryfromtheemployeewherenounderdeductionbyemployeremploy"></div>
+      <div class="rich-text" style="margin-top:10px">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal">Recovery from the employee where no under-deduction by employer (employee liable) </h2>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">“In cases where the employee has paid too little tax, not because the employer has under-deducted the amount of PAYE that the employer was required to deduct, but because the tax code that the employer was required to operate did not lead to sufficient tax being deducted, the employee will be liable for the amount of the underpayment…”<span style="color:#8B0000"> (Moyes v. HMRC [2014] UKFTT 1030 (TC), §56).</span><br>
+ </p>
+      </div>
+      <div class="anchor" id="recoveryofunderpaidpayefromemployerr80"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Recovery of underpaid PAYE from employer (r.80)</span></h2>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="font-size:15px; letter-spacing:normal">​</span></p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">"(1) This regulation applies if it appears to HMRC that there may be tax payable for a tax year under regulation 67G, as adjusted by regulation 67H(2) where appropriate, or 68 by an employer which has neither been—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) paid to HMRC, nor</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) certified by HMRC under regulation 75A, 76, 77, 78 or 79.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(1A) In paragraph (1), the reference to tax payable for a tax year under regulation 67G includes references to—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) any amount the employer was liable to deduct from employees during the tax year, and</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) any amount the employer must account for under regulation 62(5) (notional payments) in respect of notional payments made by the employer during the tax year,</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">whether or not those amounts were included in any return under regulation 67B (real time returns of information about relevant payments) or 67D (exceptions to regulation 67B).</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(2) HMRC may determine the amount of that tax to the best of their judgment, and serve notice of their determination on the employer.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(3) A determination under this regulation must not include tax in respect of which a direction under regulation 72(5) has been made; and directions under that regulation do not apply to tax determined under this regulation.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">[(3A) A determination under this regulation must not include tax in respect of which a direction under regulation 72F has been made.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(4) A determination under this regulation may—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) cover any one or more tax periods in a tax year, and</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) extend to the whole of the amount of tax determined by HMRC under paragraph (2), or to such part of it as is payable in respect of—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(i) a class or classes of employees specified in the notice of determination (without naming the individual employees), or</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(ii) one or more named employees specified in the notice.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(5) A determination under this regulation is subject to Parts 4, 5, 5A and 6 of TMA (assessment, appeals, collection and recovery) as if—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) the determination were an assessment, and</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) the amount of tax determined were income tax charged on the employer,</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">and those Parts of that Act apply accordingly with any necessary modifications." <span style="color:#331FDD">(SI 2003/2682 r.80)</span><br>
+ </p>
+        <h4 class="font_4" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal"><a href="G05-PAYE-and-NICs-decisions.html" target="_self"><span style="text-decoration:underline">See further: G5: PAYE and NICs decisions</span></a></h4>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal"><span style="font-size:15px">​</span></p>
+      </div>
+      <div class="anchor" id="creditforamountspaidpayablebyemployer"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Credit for amounts </span><span style="font-size:29px; letter-spacing:normal">payable</span><span style="letter-spacing:normal"> by employer</span></h2>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="creditforamountthatshouldhavebeendeductedevenifnotdeducted"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- Credit for amount that should have been deducted (even if not deducted)</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">"(1) This regulation applies for the purpose of determining—</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(a) the excess mentioned in section 59A(1) of TMA (payments on account of income tax: income tax assessed exceeds amount deducted at source), …2</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(b) the difference mentioned in section 59B(1) of TMA (payments of income tax and capital gains tax: difference between tax contained in self-assessment and aggregate of payments on account or deducted at source), and</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(c) the difference mentioned in section 59BA(2) of TMA (payments of income tax and capital gains tax: difference between tax contained in simple assessment and aggregate of payments on account or deducted at source).</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">&#8203;</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(2) For those purposes, the amount of income tax deducted at source under these Regulations is the total net tax deducted during the relevant tax year (“A”) after making any additions or subtractions required by paragraphs (3) to (5).</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(3) Subtract from A any repayments of A which are made before the taxpayer's return and self-assessment is made under section 8 or 8A of TMA (personal return and trustee's return).</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(4) Add to A any overpayment of tax from a previous tax year, to the extent that it was taken into account in determining the taxpayer's code for the relevant tax year.</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(5) Add to A any tax treated as deducted, other than any direction tax, but—</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(a) only if there would be an amount payable by the taxpayer under section 59B(1) of TMA on the assumption that there are no payments on account and no addition to A under this paragraph, and then</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(b) only to a maximum of that amount." <span style="color:#331FDD">(SI 2003/2682, r.185)</span></p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal"><span style="font-size:15px">​</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“I interpose here that normally an employer will deduct PAYE. The employee will show on his tax return the income but he will show the PAYE deductions as a permittable deduction when arriving at the tax that he actually has to self-assess.” </span><span style="color:#8B0000; letter-spacing:normal">(HMRC v. Ali [2011] EWHC 880 (Ch), §6).</span></p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal"><span style="font-size:15px">​</span></p>
+      </div>
+      <div class="anchor" id="directiontax"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Direction tax</span></h3>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">“direction tax” means any amount of tax which is the subject of a direction made under regulation 72(5), regulation 72F or regulation 81(4) in relation to the taxpayer in respect of one or more tax periods falling within the relevant tax year;" <span style="color:#331FDD">(SI 2003/2682, r.185(6))</span></p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">&#8203;</p>
+      </div>
+      <div class="anchor" id="relevanttaxyear"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Relevant tax year</span></h3>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">“relevant tax year” means—</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(a) in relation to section 59A(1) of TMA, the immediately preceding year referred to in that subsection;</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(b) in relation to section 59B(1) of TMA, the tax year for which the self-assessment referred to in that subsection is made;</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(c) in relation to section 59BA(2) of TMA the tax year for which the simple assessment referred to in that subsection is made;" <span style="color:#331FDD">(SI 2003/2682, r.185(6))</span></p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">&#8203;</p>
+      </div>
+      <div class="anchor" id="taxtreatedasdeductedaddedunderr1855"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Tax treated as deducted (added under r.185(5))</span></h3>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">“tax treated as deducted” means any tax which in relation to relevant payments made by an employer to the taxpayer in the relevant tax year—</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(a) the employer was liable to deduct from payments but failed to do so, or</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(b) the employer was liable to account for in accordance with regulation 62(5) (notional payments) but failed to do so;" <span style="color:#331FDD">(SI 2003/2682, r.185(6))</span></p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="taxpayer"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Taxpayer</span></h3>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">“the taxpayer” means the person referred to in section 59A(1) of TMA [or the person whose simple assessment is referred to in section 59BA(2) of TMA or the person whose self-assessment is referred to in section 59B(1) of TMA (as the case may be)." <span style="color:#331FDD">(SI 2003/2682, r.185(6))</span></p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="nocreditforamountoverpaidbyemployerevenifemployeereimbursese2"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- No credit for amount overpaid by employer (even if employee reimburses employer)</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“In our view the combined effect of these provisions is that in his self- assessment for 2009/2010 Mr Ward can only be given credit for the maximum amount that Goodman UK were obliged to deduct from his income but failed to do so. This is the revised amount referred to at [10] above. We therefore accept HMRC’s submissions on this point and it follows that any overpayment is not payable to Mr Ward directly but must be repaid by HMRC to Goodman UK.” </span><span style="color:#8B0000; letter-spacing:normal">(Ward v. HMRC [2016] UKFTT 439 (TC), §15).</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <h4 class="font_4" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Query whether this only applies where the amount is not deducted by the employer.</span></h4>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="buthmrcmayreimburseoverpaymenttoemployee"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- But HMRC may reimburse overpayment to employee:</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“HMRC appeared to be willing to accept that the overpayment could be made to Mr Ward rather than Goodman UK if he were to provide evidence of the amounts that he has reimbursed to Goodman UK in the form of bank statements showing the payments made and a confirmation from Goodman UK.” </span><span style="color:#8B0000; letter-spacing:normal">(Ward v. HMRC [2016] UKFTT 439 (TC), §11).</span><br>
+ </p>
+      </div>
+      <div class="anchor" id="nocreditforamountoverpaidbyemployerevenifemployeereimbursese"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:normal; letter-spacing:normal"><span style="font-size:20px; letter-spacing:normal">- </span><span style="letter-spacing:normal">No credit for amount overpaid by employer (even if employee reimburses employer)</span></h3>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="font-size:15px; letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“In our view the combined effect of these provisions is that in his self- assessment for 2009/2010 Mr Ward can only be given credit for the maximum amount that Goodman UK were obliged to deduct from his income but failed to do so. This is the revised amount referred to at [10] above. We therefore accept HMRC’s submissions on this point and it follows that any overpayment is not payable to Mr Ward directly but must be repaid by HMRC to Goodman UK.” </span><span style="color:#8B0000; letter-spacing:normal">(Ward v. HMRC [2016] UKFTT 439 (TC), §15).</span></p>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <h4 class="font_4" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Query whether this only applies where the amount is not deducted by the employer.</span></h4>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">But HMRC may reimburse overpayment to employee:</span></h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“HMRC appeared to be willing to accept that the overpayment could be made to Mr Ward rather than Goodman UK if he were to provide evidence of the amounts that he has reimbursed to Goodman UK in the form of bank statements showing the payments made and a confirmation from Goodman UK.” </span><span style="color:#8B0000; letter-spacing:normal">(Ward v. HMRC [2016] UKFTT 439 (TC), §11).</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="payecreditamountnotwithinthescopeofordinaryappealagainstasse"></div>
+      <div class="rich-text" style="margin-top:10px">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- PAYE credit amount not within the scope of ordinary appeal against assessment</span></h2>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">"[130] For all these reasons, which are essentially the same as those given by the UT, as a matter of construction neither regulation 185 nor 188 affects the amount of tax chargeable or payable under sections 8 and 9 or section 29 of TMA. It follows that these regulations and the availability of a PAYE credit do not fall within the scope of an appeal under section 31 of TMA to the First-tier Tribunal. Since the self-assessment and assessment provisions are the only relevant sources of the tax tribunal's jurisdiction, the availability of the PAYE credit does not fall within the First-tier Tribunal's jurisdiction." <a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="denyingemployeecredit"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-cat" style="font-size:29px; line-height:normal; letter-spacing:normal">DENYING EMPLOYEE CREDIT<br>
+ </h2>
+      </div>
+      <div class="anchor" id="hmrcsgeneraldiscretiontoshiftliabilitytotheemployee"></div>
+      <div class="rich-text" style="margin-top:1px">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">HMRC's general discretion to shift liability to the employee</span></h2>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">&#8203;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">"(7A) Nothing in PAYE regulations may be read - </p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">[...]</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) as requiring the payer to comply with the regulations in circumstances in which an officer of Revenue and Customs is satisfied that it is unnecessary or not appropriate for the payer to do so." <span style="color:#1B03F1">(ITEPA 2003, s.684(7A)(b))</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="generaldiscretionnotsubjecttotherulesinthepayeregulations"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">- General discretion not subject to the rules in the PAYE regulations</h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">"[70] ... Furthermore, provision 4A which gives vires for the making of redirection regulations and subsection (7A) were introduced at the same time, and these separate provisions in primary legislation are expressly addressed to different (but potentially overlapping) situations. The situation expressly contemplated in provision 4A concerns circumstances where it is considered that the payer should have deducted the tax. By contrast, subsection (7A)(b) is concerned with the situation in which the officer considers that it is not appropriate to require any compliance by the payer with the PAYE regime. Mr Hoey's case is not a deduction case at all. To the contrary, as he accepted, because these were notional payments by a deemed employer (subject to the territoriality point which we shall address below), there was no obligation on the End Users to deduct, but rather an obligation to account under regulation 62(5). Provision 4A makes no mention of accounting. These provisions have overlapping aims and overlapping applications. The redirection regulations are plainly not exclusive; nor are the PAYE Regulations the exclusive machinery for assessment and collection of tax in respect of an employee's employment income. This is not a case of specific legislation displacing a general provision. The scheme of this legislation enables HMRC to use the 7A power granted in primary legislation as a separate and free-standing tool, provided the criteria for its exercise are met." </span><a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="righttomakerepresentationsbeforepowerisexercised"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">- Right to make representations before power is exercised</h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal">"[71]...It is also true that HMRC must give notice to the affected employee of a direction under the redirection regulations, and there is nothing in section 684(7A) requiring similar notice to be given. However, HMRC guidance makes clear that as part of their public law duty to act fairly, HMRC must give the employee the opportunity to make representations before the 7A power is exercised. That is precisely the opportunity given to Mr Hoey by the letter of 13 October 2017." <a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="challengebywayofjudicialreview"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">- Challenge by way of judicial review</h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">"[71] Further, while it is true that regulations 72, 72F, and 81 provide safeguards for the affected employee, including express rights of appeal, these correspond closely with the basis on which the direction is made, and afford no wider protection than that available in relation to the 7A power. For example, the right of appeal in regulation 81A(1) is a right of appeal limited to the question of what is or is not a notional payment. By contrast, Parliament has chosen not to attach any right of appeal to the exercise of the 7A power, leaving judicial review as the appropriate route for challenge. This avenue of challenge does not leave the taxpayer in a worse position: whereas the statutory appeal rights do not permit a challenge to the lawfulness of the officer's decision to exercise the redirection power, such a challenge is permitted on judicial review." </span><a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a></p>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="canbeusedretrospectively"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">- Can be used retrospectively</h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">"[84] For these reasons, to construe 7A as limited to prospective application only is inconsistent with the language and purpose of the PAYE Regulations. The plain language of the 7A power simply requires the officer to ask whether it is appropriate (knowing all that the officer knows) to expect the end user to comply with the PAYE Regulations by accounting for the employee's income tax. In a typical case, HMRC are likely only to become aware of the situation giving rise to the need to consider making transfer directions well after PAYE income has been paid. Moreover, to limit the exercise of the 7A power to a situation in which HMRC are aware of all the facts in advance and can only operate it with prospective effect would seriously curtail the scope of the power. In our judgment there is nothing in the language or purpose of this provision to warrant such a conclusion." </span><a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a></p>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="exerciseofdiscretionrelievesemployerofobligationtoaccount"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">- Exercise of discretion relieves employer of obligation to account</h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">"[85] Mr Mullan submitted that even if the obligation to account for tax placed on an employer by regulation 62(5) is disapplied, or can be disapplied by exercise of the 7A power, it has no effect on the employer's separate obligation to account pursuant to section 710(4) of ITEPA. We reject this submission. Both section 710(4) and 710(1) expressly provide that the employer's obligation to deduct or account is "subject to and in accordance with PAYE regulations ..." (words introduced at the same time as the 7A power was introduced). Accordingly, the obligation in section 710(4) only takes effect, subject to and in accordance with the relevant PAYE Regulations, namely regulation 62(5). If the accounting obligation in regulation 62(5) is disapplied by the exercise of the 7A power, the section 710(4) obligation can have no independent life. The same is true of section 222 ITEPA (the grossing-up provision when the employee fails to make good the amount accounted for). If the employer is relieved of the obligation to comply with regulation 62(5) and in turn, the obligation in section 710(4) ceases to apply, the charge under section 222 simply does not arise." </span><a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a></p>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="andnocreditforemployee"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">- And no credit for employee</h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">"[109]...The exercise of the 7A power means that there is no PAYE credit available to Mr Hoey or the Claimants for the reasons we have given." </span><a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a></p>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="generaldiscretionapproachtoexercise"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- General discretion: approach to exercise</span></h2>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:28px; letter-spacing:normal">HMRC's policy: tax avoidance scheme in which end user was not involved and not aware of</h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">"[92]...The CIP guidance set out the background, key features of an offshore employment based contractor loan scheme, and why HMRC might exercise discretion under section 684 (7A)(b), stating:<br>
+"We will consider use of the discretion where contractors have used contractor loans schemes with an offshore employer and where it is reasonable to assume the end user would not have been aware of or involved in the tax avoidance scheme. If HMRC possess evidence that the end user was aware that the contractor was using an avoidance scheme with an offshore employer to receive their remuneration for services provided to the end user, without deduction of tax, we will not use the discretion as the end user should have known they might need to operate PAYE."<br>
+The CIP guidance set out a number of non-exhaustive factors relevant to determining whether it might be reasonable to conclude that the end user was not party to or aware of the tax avoidance. These included the existence of a UK intermediary between the end user and offshore employer which would generally point towards the end user being unaware of any "unorthodoxy in the arrangements"." <a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:28px; letter-spacing:normal">Must acquaint themselves with the relevant facts and relevant considerations and provide opportunity to make representations</h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">"[105] Ultimately the question for us on this part of the case is whether the HMRC officers took a lawful approach to the exercise of the 7A power. They were required to acquaint themselves with the facts and the relevant considerations. It is not for the court to decide on the manner and intensity of the enquiry to be undertaken. We can intervene only if no reasonable decision maker could be satisfied, on the basis of the enquiries made, of the merits of the decisions. This test is not met. We consider that the approach of the HMRC officers was lawful: they took into account the relevant considerations as we have explained, and their decisions were not based on irrelevant considerations. Mr Hoey and the Claimants were given the opportunity to provide evidence that the end users were aware of the arrangements and/or the need to operate PAYE, but as we have observed, no such evidence was ever provided." <a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a></p>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​​</span></p>
+      </div>
+      <div class="anchor" id="focusisonnecessityorappropriatenessofemployerscompliancewith"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:28px; letter-spacing:normal">- Focus is on necessity or appropriateness of employer's compliance with PAYE duty</h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">"[75] We do not rule out that HMRC could choose to use the 7A discretion in such circumstances, but it does not follow that the 7A discretion must be used as a matter of course where the Regulation 72 criteria would otherwise be met still less that it should be exercised in UBS's case. The focus, as explained in Hoey, is on the necessity or appropriateness of the employer's compliance which will depend on the particular circumstances of the case. The limitations of Regulation 72 to deduction scenarios does not explain why it is unnecessary or inappropriate for UBS to comply with its obligation to account. It should be noted that the Court of Appeal in Hoey, where the facts involved notional payments too, made a point of distinguishing the duty to deduct and account and highlighted the limitation of the redirection regulations to deduction scenarios. If it were thought such limitation of scope was so anomalous or unfair or inconsistent that it required exercise of the 7A discretion one might have thought that that would have elicited comment. The gap in Regulation 72's scope would have presented reason enough to justify HMRC's exercise of the 7A discretion in that case such that the Court would not have needed to engage with the disputed issues regarding the relevance of the end-user's lack of knowledge of the offshore employment arrangements.</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">...</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">[89] In our judgment the positive reasons (efficiency and the Regulation 72 anomaly) advanced, while capable of sustaining an exercise of the 7A discretion do not individually or together compel its exercise in UBS's favour. In summary going back to Padfield and Hoey we remind ourselves what this power is for. Parliament means to allow HMRC broad discretion to relieve compliance from the PAYE Regulations where an HMRC officer considers it unnecessary or inappropriate. The backdrop is the collection machinery of the employee's tax liability. While there is no policy of always collecting from the employer, that does not rule out a starting point of collecting from the employer. The focus is on employer's compliance. While we recognise it would be open for the officer to decide that it was appropriate in the circumstances to exercise the discretion, we are not persuaded they would be bound to exercise the discretion and that HMRC would thereby breach the principle in Padfield or be Wednesbury irrational if they did not." <a href="https://www.bailii.org/uk/cases/UKUT/TCC/2024/242.html" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(R (oao UBS AG) v. HMRC [2024] UKUT 242 (TCC), Judge Raghavan and Judge Zaman)</span></a></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">​<span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="statutorydirectionsunderr72andr81"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Statutory directions under r.72 and r.81</span></h2>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="distinctionbetweenr72andr81"></div>
+      <div class="rich-text" style="margin-top:5px">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Distinction between r.72 and r.81</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <h4 class="font_4" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">The key difference between HMRC’s power under r.72 and its power under r.81 is that r.72 only applies where there has been an under-deduction by the employer from amounts paid to the employee, whereas r.81 applies to all PAYE liabilities. The primary PAYE obligation is to deduct tax from relevant payments (r.21). Where the relevant payment is a notional payment, however, it is not possible to deduct from that payment and thus r.62 requires the employer to deduct tax from other relevant payments actually made and to account to HMRC for any amount which the employer is unable to deduct due to payments actually made being insufficient. This excess can only be the subject of a r.81 determination.</span></h4>
+        <h4 class="font_4" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></h4>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">"[78] Where the employer (or deemed employer) fails to deduct or account for the PAYE due, HMRC can make directions transferring liability under the redirection regulations. Taking these in turn, under regulation 72 there are two alternative conditions that must be met: A applies where the employer took reasonable care to comply and failed to deduct due to an error in good faith; B applies where the employee received payments knowing the employer had wilfully failed to deduct. In both cases, there must be a failure to deduct and this regulation does not apply in a situation where the employer has made no payments from which deductions could have been made. The power to make a direction under regulation 72F applies where the employer fails to deduct, and the employee has received a relevant payment and tax on that payment has been self-assessed or paid under section 59A TMA. Again, there is no dispute that this regulation does not apply here.</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">[79] Regulation 80 applies where the employer has not deducted tax from the earnings before paying those earnings to the employee, or has deducted tax but failed to account for it to HMRC, or where the employer has made notional payments of PAYE but has not accounted for or paid the tax on the notional payments. In any of these cases, HMRC may determine the amount of the unpaid tax to the best of their judgment, and serve notice of their determination on the employer. HMRC could have made such a determination under regulation 80 and served notice of it on the End Users here. Had that been done, and if any part of the tax determined under regulation 80 remained unpaid after 30 days from the date on which the determination became final and conclusive, condition B in regulation 81(3) would have applied (because the unpaid tax would have represented amounts for which the End Users were required to account under regulation 62(5) (notional payments)). Accordingly, in those circumstances, HMRC could (in accordance with regulation 81(4)) have directed that "the employer is not liable to pay the amount of tax which appears to them should have been but was not— … (b) accounted for under regulation 62(5)". In other words, HMRC could have made a direction transferring liability to the employee recipient of the PAYE income.</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">[80] On behalf of HMRC, Scott McFarlane explains in his witness statements why, on the unusual facts of this case, there was good reason for HMRC not to have exercised the specific powers available to make a regulation 80 determination in respect of any end users, followed by a direction under regulation 81. Leaving aside the practical difficulty that HMRC did not know who the end users were for any of the Claimants (apart from those using the services of Mr Hoey, who supplied the names of his End Users in 2015, in the course of the litigation), and assuming that regulation 80 determinations could have been made against all end users, the end users would have had appeal rights under regulation 80(5) and would almost certainly have exercised them on the reasonable basis that they did not know (and could not have been expected to know) that section 689 of ITEPA potentially applied to them. HMRC would have been forced to engage in potentially costly and lengthy litigation against the end users. If successful, that would have left the end users to pursue the Claimants (who were undoubtedly liable to pay the tax on the employment income they received) for restitution of the tax paid. If ultimately unsuccessful against the end users, HMRC would then have been in a position to pursue the individuals through a regulation 81 direction." <a href="https://www.bailii.org/ew/cases/EWCA/Civ/2022/656.html#para188" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(Hoey v. HMRC [2022] EWCA Civ 656, Simler LJ, Phillips LJ, Henderson LJ)</span></a><br>
+ </p>
+      </div>
+      <div class="anchor" id="effectofr72andr81determinations"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:normal; letter-spacing:normal"><span style="font-size:20px; letter-spacing:normal">- E</span><span style="letter-spacing:normal">ffect of r.72 and r.81 determinations</span></h3>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <h4 class="font_4" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Both r.72 and r.81 operate in the same way: HMRC may direct that the employer is not liable and, if they do so, the tax that is the subject of the direction under r.185(5) or r.188(3)(a) (r.72(6) and r.81(5)). TMA 1970 s.59B(1) provides that the difference between the amounts shown in a person’s self-assessment return and the aggregate of any payments on account/tax deducted at source is payable by the taxpayer. Regulation 185 then provides that the tax deducted at source includes any tax treated as deducted, including amounts the employer was liable to account for under r.62(5) but failed to so, other than tax which is subject to a direction (r.185(5)). Similarly, in relation to other assessments, the tax payable is the amount of the assessment less adjustments, which include amounts the employer was liable to account for in accordance with r.62(5) but failed to do so, unless it is the subject of a direction (r.188). It can be seen, therefore, that the effect of r.72 and r.81 is not directly to create a liability for the employee, but to reduce the deductions the employee is entitled to in respect of other liabilities. From this, it follows that if the basic liability, in respect of the amounts which HMRC believe are employment income, has not been given effect to in relation to the employee (either through amendment to the self-assessment or by issuing a discovery assessment), the r.72 and r.81 directions will have no effect on the employee.</span></h4>
+        <h4 class="font_4" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="font-size:15px; letter-spacing:normal">​</span></h4>
+      </div>
+      <div class="anchor" id="regulation72direction"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal">Regulation 72 direction</h2>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">“(1) This regulation applies if—<br>
+(a) it appears to the Inland Revenue that the deductible amount exceeds the amount actually deducted, and<br>
+(b) condition A or B is met.<br>
+(2) In this regulation and regulations 72A and 72B<br>
+“the deductible amount” is the amount which an employer was liable to deduct from relevant payments made to an employee in a tax period;<br>
+“the amount actually deducted” is the amount actually deducted by the employer from relevant payments made to that employee during that tax period;<br>
+“the excess” means the amount by which the deductible amount exceeds the amount actually deducted.<br>
+(3) Condition A is that the employer satisfies the Inland Revenue—<br>
+(a) that the employer took reasonable care to comply with these Regulations, and<br>
+(b) that the failure to deduct the excess was due to an error made in good faith.<br>
+(4) Condition B is that the Inland Revenue are of the opinion that the employee has received relevant payments knowing that the employer wilfully failed to deduct the amount of tax which should have been deducted from those payments.<br>
+(5) The Inland Revenue may direct that the employer is not liable to pay the excess to the Inland Revenue.<br>
+(5A) Any direction under paragraph (5) must be made by notice (“the direction notice”), stating the date the notice was issued, to—<br>
+(a) the employer and the employee if condition A is met;<br>
+(b) the employee if condition B is met.”<span style="color:#2E10EB"> (SI 2003/2682, r.72)</span><br>
+ </p>
+      </div>
+      <div class="anchor" id="conditionadirectionemployertookreasonablecare"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- Condition A direction (employer took reasonable care)</span></h2>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Reasonable care where HMRC failed to communicate with new agent</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“The Appellant had done all that was required of it to effect a change in its agent. The Appellant did not in fact receive the amended notice of coding and the failure to deduct the correct amount of tax was not due to its failure to take reasonable care or bad faith.  The failure in this case is not on the part of the Appellant. HMRC's records were not updated upon the receipt of the form 64-8 on 19 July 2013. As late as August 2016 the screenshots of HMRC's employer record for the Appellant still show Connor Warrin's email and telephone contact details.  We therefore conclude that Condition A was satisfied. HMRC are able to issue a direction under Regulation 72.” </span><span style="color:#8B0000; letter-spacing:normal">(Cos Systems Ltd v. HMRC [2017] UKFTT 168 (TC), §19, Judge Gething).</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">HMRC must issue direction if conditions satisfied</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“We note that when Regulation 72(5) is read in context, in particular in light of Regulations 72A (which provides for the possibility of a request being made by an employer that a direction be issued and sets out the appeal rights of an employer which appeal will be successful if Conditions A or B are satisfied) it is clear the use of the word may does not confer any discretion on HMRC. Once the power to issue a Direction is invoked by the making of a request by an employer HMRC must issue a Direction if either of the Conditions A or B is satisfied.  This is a fundamental rule of construction, an example of which is given in Craies on "Legislation, A Practitioners Guide to the Nature Process and Interpretation of Legislation", Eleventh Edition published by Sweet &amp; Maxwell in 2017 and edited by Daniel Greenberg, at paragraph 12.2.4, we find that the Appellant has invoked the power in its Statement of Case.” </span><span style="color:#8B0000; letter-spacing:normal">(Cos Systems Ltd v. HMRC [2017] UKFTT 168 (TC), §20, Judge Gething).</span><br>
+ </p>
+      </div>
+      <div class="anchor" id="reasonablecare"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Reasonable care</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Reasonable care is an objective test</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“In the context of Regulation 72(3), however there has never been any possibility of mitigating the objective failure to take reasonable care by establishing a reasonable excuse (which has a subjective element).  Reasonable care in the context of 72(3) is simply a pre-condition to the possibility of HMRC exercising their discretion to make a direction under Regulation 72(5)… In our view, therefore, it is intended to reflect the "harsher" position of negligence (ie. an objective test with no element of subjectivity)…The test, therefore, that we shall apply in this case is to consider what a reasonable taxpayer exercising reasonable diligence in the application of Miss Young's revised tax code would have done.” </span><span style="color:#8B0000; letter-spacing:normal">(Chapter Trading Ltd v. HMRC [2015] UKFTT 458 (TC), §§37 – 39).</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Take account of employer’s resources</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“This does not require that mistakes must never be made. Consequently, the Tribunal consider that the standard of “reasonable care” is one that must be appropriate and proportionate to the particular contractor’s business…This was the only error that J&amp;M had made with its sub-contractors over a seven year period and, in a company the size of J&amp;M, there was clearly no dedicated singular function for ensuring compliance with the CIS Regulations.” </span><span style="color:#8B0000; letter-spacing:normal">(J &amp; M Interiors (Scotland) Ltd v. HMRC [2014] UKFTT183 (TC), §§60…61, Judge Gemmell).</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Failure to fully investigate why payroll not operating properly shows lack of care</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“A reasonable taxpayer exercising reasonable diligence in the application of the revised tax code would have investigated the exception reports with greater forensic acuity than that undertaken by the appellant.  It is our view that it should have been apparent to those reviewing the payroll (and the exception reports) that the application of the revised tax code was not operating properly.  It was not deducting any tax at all from Miss Young's wages which it clearly should have been given that the revised tax code was lower than the code previously used, (when tax had been deducted).” </span><span style="color:#8B0000; letter-spacing:normal">(Chapter Trading Ltd v. HMRC [2015] UKFTT 458 (TC), §85).</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Failure to check new employee’s statement about tax position shows lack of care</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“…we note that Champneys has no record of checking what the employee said at her interview to explain why Statement A was applied rather than Statement B (which assumes that some of the personal allowance has already been used). Further, as the P46 or starter checklist was not obtained and/or retained, regulation 46(2C) required Champneys to operate an OT code. This is accepted by Champneys as Mr Flarry noted that he put procedures in place after he joined in November 2014 to ensure that these starter procedures and codes were followed and applied… On the basis of this evidence we find that Champneys could not have met paragraph (a) in Condition A of regulation 72 because it failed to exercise the reasonable care expected of a reasonable and prudent taxpayer in operating new starter procedures in relation to the employee.” </span><span style="color:#8B0000; letter-spacing:normal">(Champneys Tring Ltd v. HMRC [2017] UKFTT 197 (TC), §§30…31, Judge Nicholl).</span></p>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="conditionbdirectionemployeeknewemployerwilfullyfailedtodeduc"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- Condition B direction (employee knew employer wilfully failed to deduct)</span></h2>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Burden of proof on HMRC in relation to knowledge and wilful failure</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“However although the onus of proof falls to HMRC show that the Appellants received payments from their employer, knowing that the employer had wilfully failed to deduct PAYE and NI, it also falls on the Appellants to demonstrate that the deductions have actually been made and that the assessments are therefore excessive. The Appellants have not provided any evidence to show that actual deductions were made and paid to HMRC.” </span><span style="color:#8B0000; letter-spacing:normal">(Marsh v. HMRC [2016] UKFTT 539 (TC), §72).</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Whether PAYE deducted is an objective question</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“[the taxpayer] submitted that the test to establish whether PAYE had been deducted was an objective one. I agree with that submission.”</span><span style="color:#8B0000; letter-spacing:normal"> (West v. HMRC [2016] UKFTT 536 (TC), §53).</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Deduction is not the same as payment to HMRC</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“Mr Brennan, on behalf of the Revenue, accepts that deduction of tax is not the same as payment of tax. I agree.” </span><span style="color:#8B0000; letter-spacing:normal">(R v. IRC ex p. McVeigh [1996] STC 91 at 98).</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">HMRC’s Opinion</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="color:#8B0000; letter-spacing:normal">See R v. CIR ex p. Cook and Keys [1987] CO 1357</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Meaning of wilful</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">"[53] Secondly, while the natural meaning of wilful includes deliberate, wilful is capable of having a wider meaning, depending on the context. This was a point made by Tuckey LJ in the CP case at para 13:</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“13.     The legal dictionaries show that wilful is used in many contexts. One can safely say that it always means deliberate and that it will take any further meaning from the word or words which it qualifies and its context but beyond that one cannot go.”</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">[54]  Thirdly, as the City Equitable case illustrates and Romer J explains, one context in which wilful may well have a wider meaning is where it relates to a breach of duty. “Default or neglect” in clause 14 is apt to refer to a breach of duty rather than merely omissions; indeed “default” must be so referring. This is the most plausible explanation of the use of the adjective “wilful”. An “act” is not the counterpart to a breach of duty and so there is no basis for Mr McBrearty’s supposedly “logical” submission that “deliberate” and “wilful” must have the same meaning." </span><a href="https://www.bailii.org/uk/cases/UKSC/2021/12.html" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal; text-decoration:underline; letter-spacing:normal">(Burnett v. International Insurance Company of Hanover Limited [2021] UKSC 12)</span></a></p>
+        <h3 class="font_3" style="margin-left:80px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></h3>
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Culpable conduct deliberately carried out </span></h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“I take it that if there is evidence of culpability or blameworthiness or wrong, deliberately or intentionally carried out, then the word ‘wilful’ can properly be applied to it.” </span><span style="color:#8B0000; letter-spacing:normal">(R v. CIR ex p. Cook and Keys [1987] CO 1357).</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Need not understand that, as a matter of law, PAYE has not been deducted</span></h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">"[62] ... Mr West’s belief, Mr Slater submitted, and we accept, is a purely subjective question. As 5 May J put it in McVeigh, at page 96d, referring to R v IRC, ex p Chisholm [1981] STC 253, “… ‘knowing’ means knowing, not ‘ought to have known’ and ‘wilfully means ‘intentionally or deliberately’.”</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">[63] What Mr Slater is essentially arguing is that because Mr West believed that, as a matter of law, what Astral had done amounted to a deduction of tax, neither Astral could be said to have deliberately failed to deduct the tax nor could it be said that Mr West himself knew of such a wilful failure.</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">[64] That, in our judgment, is not the correct approach to questions of this nature. For a person wilfully to effect a particular legal outcome, it is not necessary for that person to be cognisant of the legal consequences of his or her actions. It is necessary only for that person intentionally or deliberately to put in train the various actions (or knowingly to fail to do so in the case of omissions) that in the event have the material consequences in law.</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">[65] ... Crucially [taking professional advice] did not affect the accepted fact that Mr West knew all along that, notwithstanding the acknowledgement of the indebtedness of the company to HMRC in respect of the tax and NICs purportedly deducted, no actual payment of tax could or would ever be made.</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">[66] ... What matters is whether Mr West (as the guiding mind of Astral) intentionally failed to deduct tax, and whether he knew that that had happened. His knowledge of the factual matters we have mentioned above must be sufficient to satisfy both those conditions. The fact that Mr  West may not, or even probably did not, know that those facts meant that, as a matter of law, a deduction had not been made is not a relevant matter. He is to be taken to intend the legal consequences of his deliberate actions." </span><a href="https://www.bailii.org/uk/cases/UKUT/TCC/2018/100.pdf" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(HMRC v. West [2018] UKUT 100, Vos J and Judge Berner)</span></a></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Wilful conduct not to be equated with inadvertence </span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“[The taxpayer] submitted that, in the first decision, the FTT had found, at [132], that he had acted as a shadow director “albeit perhaps inadvertently”.  [The taxpayer] submitted that inadvertence was not enough to establish that he had wilfully procured the payment of remuneration without deduction of tax.  We agree that wilfulness is not to be equated with inadvertence but we do not consider that this submission assists [the taxpayer] in this case.  The earlier decision has been set aside and we are free to and do make our own findings of fact based on the evidence that we have seen and heard.  We have had the advantage of hearing the evidence of Ms Beale in person.  We have found, on the basis of that testimony and other evidence described above, that [the taxpayer] sought to control TT and TO while not being publicly identified as a director.  It follows that his actions were not inadvertent but deliberate.” </span><span style="color:#8B0000; letter-spacing:normal">(Rangos v. HMRC [2015] UKFTT 262 (TC)).</span><span style="letter-spacing:normal">​​</span><br>
+ </p>
+      </div>
+      <div class="anchor" id="paymentofsalarywhencompanyhasinsufficientfundstoaccountforpa"></div>
+      <div class="rich-text" style="margin-top:4px">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- Payment of salary when company has insufficient funds to account for PAYE</span></h3>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">"[25] In both McVeigh and in this case, the crucial stark realities were that: (a) when the gross remuneration was voted, the employee had no pre-existing entitlement to it, (b) the remuneration was set so as to eliminate the director’s loan account, and (c) most importantly, there was never from start to finish any possibility of the tax actually being paid. In such circumstances, as it seems to us, as a matter of law, no amount of “bookkeeping and accounting” or other “making of a record” can amount to a true deduction of tax." </span><a href="https://www.bailii.org/uk/cases/UKUT/TCC/2018/100.pdf" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline; letter-spacing:normal">(HMRC v. West [2018] UKUT 100, Vos J and Judge Berner)</span></a></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“The facts of this case, whilst similar to those of Prowse differ crucially insofar as the company was clearly in a difficult financial position at the time when the Appellants decided to take salaries instead of dividends. It is difficult to reconcile the Appellants assertion (paragraph 38 above) that – “because of increasing pressure on profits it became quite impracticable for the directors to repeatedly withdraw funds through a dividend, which after all is a distribution of profit rather than through a salary. If the profit was not there is could not be distributed. It was at that point that it was decided to increase salaries” – with their decision to award themselves substantial salaries. In Prowse the Tribunal found that the decision to change the method of cash extraction was reached at a time when there was no indication there would not be sufficient profits to cover future dividends. In this case, it is clear that the company was already in financial difficulties when the directors decided to take salaries instead of dividends. The company’s position became even more financially precarious in the ensuing months but the Appellants continued to take substantial salaries when it must have been clear that funds did not exist to discharge the commensurate PAYE and NIC. On that basis actual, deductions could not have been made.” </span><span style="color:#8B0000; letter-spacing:normal">(Marsh v. HMRC [2016] UKFTT 539 (TC), §71)</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="color:#8B0000; letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="switchingfromdividendstosalaryatatimeoffinancialstressindica"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- Switching from dividends to salary at a time of financial stress indicates wilful</span></h3>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“The company was persistently in arrears with its PAYE liability and quite evidently never in a position to pay the sums calculated when they fell due. The company was clearly in financial difficulties. That in our view is the real reason why dividends could not be awarded; distributions can only be made out of profits. Otherwise they would be ultra vires and unlawful. A dividend cannot be in excess of retained profits.”</span><span style="color:#8B0000; letter-spacing:normal"> (Marsh v. HMRC [2016] UKFTT 539 (TC), §73)</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="color:#8B0000; letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="notwilfulwheredirectortakingstepstoavoidadministrationandrea"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:28px; letter-spacing:normal">- Not wilful where director taking steps to avoid administration and reasonably believed lender would accept</h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">"[212] </span>Accordingly, the payment to MB in M9 was credited to his loan account within the required 9 months to avoid a benefit in kind disclosure/charge but the tribunal were satisfied that MB did not know this prior to 12 December 2019. The credit would have been, as MB's accountant had explained, a book entry and no actual payment would have been made to MB.</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">[213] It did however create a liability for PAYE and NIC.</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">[214] The tribunal were persuaded by MB's submission that it was not in his interests for the company to be placed in administration and that he and his board had taken significant steps to avoid this by providing finance from other sources and reasonably believed that the lender would accept this, which it did not. Also, the company's administration meant the loss of £115,000 MB had invested from his pension in preference shares in the company.</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">...</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">[223] The tribunal held that MB was not aware of the fact the company was to be placed imminently administration and was not responsible for the declaration and return to HMRC of a larger than normal salary payment in December.</p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">[224] MB was responsible for the reallocation of debts within the Group but the reasons for this, to protect the legal firm from 'the hostile takeover' attempt, were plausible and were not a reflection on transfers within the Group designed to avoid tax and NIC liabilities." <a href="https://www.bailii.org/uk/cases/UKFTT/TC/2024/TC09326.html" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline">(Burne v. HMRC [2024] UKFTT 945 (TC), Judge Gemmell)</span></a></p>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="employerrequestforr72determination"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- Employer request for r.72 determination</span></h2>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">"(1) In relation to condition A in regulation 72(3), the employer may by notice to the Inland Revenue (“the notice of request”) request that the Inland Revenue make a direction under regulation 72(5).</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(2) The notice of request must—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) state—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(i) how the employer took reasonable care to comply with these Regulations; and</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(ii) how the error resulting in the failure to deduct the excess occurred;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) specify the relevant payments to which the request relates;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(c) specify the employee or employees to whom those relevant payments were made; and</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(d) state the excess in relation to each employee." <span style="color:#331FDD">(SI 2003/2682 r.72A)</span></p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Request must explain who reasonable care was taken</span></h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“Further, we find that even if Champneys had intended to request a direction under regulation 72A after the regulation 80 determination had been made, its correspondence did not meet the requirements set out in regulation 72A(2) as it failed to state how it took reasonable care to comply with the Regulations. No notice of request can therefore be regarded as having been given.” </span><span style="color:#8B0000; letter-spacing:normal">(Champneys Tring Ltd v. HMRC [2017] UKFTT 197 (TC), §27, Judge Nicholl).</span></p>
+        <h3 class="font_3" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">​</h3>
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">HMRC refusal</span></h3>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"(3) The Inland Revenue may refuse the employer's request under paragraph (1) by notice to the employer (“the refusal notice”) stating—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) the grounds for the refusal, and</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) the date on which the refusal notice was issued." <span style="color:#331FDD">(SI 2003/2682 r.72A)</span></p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">&#8203;</p>
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">Employer appeal against refusal on limited grounds</span></h3>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(4) The employer may appeal against the refusal notice—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) by notice to the Inland Revenue,</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) within 30 days of the issue of the refusal notice,</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(c) specifying the grounds of the appeal.</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(5) For the purpose of paragraph (4) the grounds of appeal are that—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) the employer did take reasonable care to comply with these Regulations, and</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) the failure to deduct the excess was due to an error made in good faith.</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(6) If on appeal under paragraph (4) that is notified to the tribunal it appears to the tribunal that the refusal notice should not have been issued the tribunal may direct that the Inland Revenue make a direction under regulation 72(5) in an amount the tribunal determines is the excess for one or more tax periods falling within the relevant tax year." <span style="color:#331FDD">(SI 2003/2682 r.72A)</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Burden of proof on the employer</span></h3>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_8" style="margin-left:160px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“In this case, the basis of the appeal is that HMRC should have made a direction under Regulation 72(5) and that the basis of their failure to do so is flawed in that the appellant did take reasonable care.  So, the burden of proving that it took reasonable care is on the appellant.” </span><span style="color:#8B0000; letter-spacing:normal">(Chapter Trading Ltd v. HMRC [2015] UKFTT 458 (TC), §43).</span><br>
+ </p>
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">Employee appeal re Condition A direction</span></h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="font-size:15px">​</span></p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"(1) An employee may appeal against a direction notice under regulation 72(5A)(a)—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) by notice to the Inland Revenue,</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) within 30 days of the issue of the direction notice,</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(c) specifying the grounds of the appeal</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(2) For the purpose of paragraph (1) the grounds of appeal are that—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) the employer did not act in good faith,</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) the employer did not take reasonable care, or</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(c) the excess is incorrect.</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(3) On an appeal under paragraph (1) that is notified to the tribunal, the tribunal may—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) if it appears that the direction notice should not have been made, set aside the direction notice; or</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) if it appears that the excess specified in the direction notice is incorrect, increase or reduce the excess specified in the notice accordingly." <span style="color:#331FDD">(SI 2003/2682 r.72B)</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="font-size:15px">​</span></p>
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">Employee appeal re Condition B direction</span></h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="font-size:15px">​</span></p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"(1) An employee may appeal against a direction notice under regulation 72(5A)(b)—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) by notice to the Inland Revenue,</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) within 30 days of the issue of the direction notice,</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(c) specifying the grounds of the appeal.</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(2) For the purpose of paragraph (1) the grounds of appeal are that—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) the employee did not receive the payments knowing that the employer wilfully failed to deduct the amount of tax which should have been deducted from those payments, or</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) the excess is incorrect.</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(3) On an appeal under paragraph (1) that is notified to the tribunal, the tribunal may—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) if it appears that the direction notice should not have been made, set aside the direction notice; or</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) if it appears that the excess specified in the direction notice is incorrect, increase or reduce the excess specified in the notice accordingly." <span style="color:#331FDD">(SI 2003/2682 r.72C)</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="color:#331FDD; font-size:15px">​</span></p>
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">Multiple employees appealing: single appeal</span></h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="color:#331FDD; font-size:15px">​</span></p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"(1) This regulation applies to appeals under regulations 72A(4), 72B, 72C, 72G and 81A.</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(4) This paragraph applies if in respect of the same error by an employer in relation to condition A in regulation 72(3)—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) more than one employee is appealing under regulation 72B; or</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) there is an appeal by an employer under regulation 72A(4) and by an employee under regulation 72B</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(8) Where paragraph (4) applies or the appeal is material to the liability to tax of the employer and the employee, all the persons concerned are entitled to be parties to the appeal." <span style="color:#331FDD">(SI 2003/2682 r.72D)</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="color:#331FDD; font-size:15px">​</span></p>
+      </div>
+      <div class="anchor" id="regulation81direction"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Regulation 81 direction</span></h2>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">"(1) This regulation applies if—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) any part of the tax determined under regulation 80 is not paid within 30 days from the date on which the determination became final and conclusive, and</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) condition A or B is met in relation to an employee.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(2) Condition A is that the Inland Revenue are of the opinion that the employee in respect of whose relevant payments the determination was made has received those payments knowing that the employer has wilfully failed to deduct the amount of tax which should have been deducted from those payments.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(3) Condition B is that the unpaid tax represents an amount for which the employer was required to account under regulation 62(5) (notional payments) in relation to a notional payment to the employee.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(4) The Inland Revenue may direct that the employer is not liable to pay the amount of tax which appears to them should have been but was not—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) deducted on making those relevant payments, or</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) accounted for under regulation 62(5).</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(4A) If condition A or B is met, any direction under paragraph (4) must be made by notice (“the direction notice”) to the employee stating the date the notice was issued.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(5) If a direction is made, the amount of tax must not be added under regulation 185(5) or 188(3)(a) (adjustments for self-assessments and other assessments) in relation to the employee.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal"><span style="font-size:15px">(6) Tax payable by an employee as a result of a direction carries interest, as if it were unpaid tax due from an employer, in accordance with [section 101 of the Finance Act 2009." </span><span style="color:#331FDD; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal">(SI 2003/2682 r.81)</span></p>
+        <h3 class="font_3" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal">​</h3>
+      </div>
+      <div class="anchor" id="burdenofproofonthetaxpayer"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="font-size:20px; letter-spacing:normal">- Burden of proof on the taxpayer </span></h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“The cases cited above are binding on us and we hold that [the taxpayer] bears the burden of proving that he was not an employee of TT and TO and did not receive the payments from those companies knowing that they had wilfully failed to deduct tax from the payments.” </span><span style="color:#8B0000; letter-spacing:normal">(Rangos v. HMRC [2015] UKFTT 262 (TC), §11).</span><br>
+ </p>
+      </div>
+      <div class="anchor" id="interplaybetweenr72r80andr81"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal">Interplay between r.72, r.80 and r.81</h2>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="regulation72directionhasnoeffectinrelationtopayedeterminedun"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal">- Regulation 72 direction has no effect in relation to PAYE determined under r.80</h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <h4 class="font_4" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">The existence of a r.80 determination in respect of PAYE precludes the effectiveness of any possible r.72(5) direction (e.g. on the basis that the employer acted reasonably and in good faith) and thus removes a potential route out of liability for the employer.</h4>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">“(3) A determination under this regulation must not include tax in respect of which a direction under regulation 72(5) has been made; and directions under that regulation do not apply to tax determined under this regulation.”<span style="color:#2E10EB"> (r.80(3)).</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">“Once a Regulation 80 determination is made by HMRC, although in principle it is possible for a Regulation 72(5) direction to be made, Regulation 80(3) clearly prevents any 72(5) direction from having effect in relation to an amount of tax payable which has already been covered by the Regulation 80 determination.” <span style="color:#8B0000">(Pendergate Ltd v. HMRC [2016] UKFTT 778 (TC), §31, Judge Raghavan).</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="nopointinemployerseekingar72directionafterr80determination"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal">- No point in employer seeking a r.72 direction after r.80 determination</h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">“As the regulation 80 determination was in respect of the full amount of the excess tax due in this case, there was no scope for a regulation 72(5) direction to be made in any event.” <span style="color:#8B0000">(Champneys Tring Ltd v. HMRC [2017] UKFTT 197 (TC), §28, Judge Nicholl).</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">“Further, although a refusal in relation to a later 72(5) direction, even if it purported to cover the same amount of tax as covered by Regulation 80 could generate appeal rights the difficulty is that this will not ultimately assist the appellant because even if the tribunal were to agree that a Regulation 72(5) direction was appropriate because the conditions were met, it would be prevented by Regulation 80(3) from covering tax which is the subject of the Regulation 80 direction by making a direction under Regulation 72(5).” <span style="color:#8B0000">(Pendergate Ltd v. HMRC [2016] UKFTT 778 (TC), §33, Judge Raghavan).</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="onlyremedywouldbejudicialreviewofthedecisiontomakear80determ"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal">- Only remedy would be judicial review of the decision to make a r.80 determination</h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">“The consequence of the above conclusion is that it appears HMRC can effectively forestall a Regulation 72 determination by moving ahead with a Regulation 80 determination and this is not something which can be policed by an appeal to the tribunal. A decision to move to a Regulation 80 determination must nevertheless be exercised in accordance with good administrative practice and principles of public law reasonableness and fairness and if it is not then a taxpayer's remedy will lie in seeking a judicial review and/or pursuing a complaint or other forms of administrative redress.” <span style="color:#8B0000">(Pendergate Ltd v. HMRC [2016] UKFTT 778 (TC), §34, Judge Raghavan).</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="orhmrccanbeorderedtovacater80determination"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:normal; letter-spacing:normal">- Or: HMRC can be ordered to vacate r.80 determination</h3>
+        <p class="font_8" style="margin-left:160px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_8" style="margin-left:160px; font-size:15px; line-height:normal; letter-spacing:normal">“A Regulation 80(3) Determination must not include tax in respect of which a Direction under regulation 72(5) has been made and Directions under Regulation 72 do not apply to tax determined under Regulation 80. In our opinion it would be a perverse construction of Regulations 72 and 80 to say 72 could only be invoked if there had been no previous Regulation 80 Determination. For three reasons:<br>
+(1)   The Treasury cannot have intended that an employer's liability to pay under deducted payroll tax should depend on the mere happenstance of the timing of the issue of a Determination. This is particularly so as the employer may not be aware HMRC is about to issue a Determination under regulation 80.<br>
+(2)   Regulation 80 specifically says that a regulation 80 Determination must not include tax in respect of which a Direction under Regulation 72 has been made.  It presupposes that consideration should be given first to whether Regulation 72 is in point. <br>
+(3)   As both Regulations potentially deal with any excess of tax due over tax paid, to give effect to Regulation 80(3) necessarily requires Regulation 80 Determinations not to apply to the prescribed and narrow category of cases which naturally fall within either Condition A and B of regulation 72 (or Regulation 72F which is not relevant to this case). Where a taxpayer has taken reasonable care, as we find in this case, no Regulation 80 determination ought to be given…As a Determination under Regulation 80 is to be treated as an assessment for the purposes of the Taxes Management Act 1970 we therefore consider that the Regulation 80 Determination should be vacated and that HMRC should issue a Direction under Regulation 72 in relation to the excess tax.” <span style="color:#8B0000">(Cos Systems Ltd v. HMRC [2017] UKFTT 168 (TC), §§21…22, Judge Gething).</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="powertowithdrawr80determinationmatterforjudicialreview"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:normal; letter-spacing:normal">- Power to withdraw r.80 determination matter for judicial review</h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal">“Similarly questions of whether HMRC would be able to withdraw the Regulation 80 direction under their statutory powers, and if so whether any refusal to do so might be challenged are not matters with the tribunal's jurisdiction on an appeal against Regulation 80 and again are in principle matters falling within the remit of judicial review.” <span style="color:#8B0000">(Pendergate Ltd v. HMRC [2016] UKFTT 778 (TC), §35).</span><br>
+ </p>
+      </div>
+      <div class="anchor" id="regulation72fdirectiontaxlikelyselfassessed"></div>
+      <div class="rich-text">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Regulation 72F direction (tax likely self-assessed)</span></h2>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">"(1) Regulation 72F applies where—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) one or more employees have received a relevant payment;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) it appears to HMRC that an amount intended to represent tax on the payment—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(i) is likely to have been self-assessed by one or more of the employees, or</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(ii) has not been self-assessed, but has been paid under section 59A TMA (payments on account of income tax), section 559A of ICTA (treatment of sums deducted under s 559 (sub-contractors)) or section 62 of the Finance Act 2004 (treatment of sums deducted (sub-contractors));</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(c) any of conditions A, B and C is met;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(d) a trigger event has occurred; and</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(e) a trigger event did not occur before 6th April 2008." <span style="color:#331FDD; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal">(SI 2003/2682 r.72E)</span></p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">&#8203;</p>
+      </div>
+      <div class="anchor" id="conditionaamountliabletodeductexceedsamountdeducted"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Condition A: amount liable to deduct exceeds amount deducted</span></h3>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"(2) Condition A is that it appears to HMRC that the amount which the employer was liable to deduct—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) from the relevant payment; or</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) in the case of a notional payment, from other relevant payments,</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">exceeds the amount actually deducted." <span style="color:#331FDD; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal">(SI 2003/2682 r.72E)</span></p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="conditionbamountrequiredtoaccountforonnotionalpaymentsexceed"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Condition B: amount required to account for on notional payments exceeds amount accounted for</span></h3>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"(3) Condition B is that it appears to HMRC that the amount for which the employer was required to account under regulation 62(5) (notional payments) in respect of the relevant payment exceeds the amount actually accounted for." <span style="color:#331FDD; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal">(SI 2003/2682 r.72E)</span></p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="conditionctaxincludedinr80determinationbutunpaid"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Condition C: tax included in r.80 determination but unpaid</span></h3>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"(4) Condition C is that—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) tax on the relevant payment was included in a determination under regulation 80 (determination of unpaid tax and appeal against determination); and</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) the full amount of the determination is not paid within 30 days from the date on which the determination became final and conclusive." <span style="color:#331FDD; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal">(SI 2003/2682 r.72E)</span></p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">&#8203;</p>
+      </div>
+      <div class="anchor" id="triggerevents"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Trigger events</span></h3>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"(5) The following are trigger events—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) HMRC serve notice of a determination under regulation 80 that includes tax on the relevant payment;</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) HMRC receive a return under section 8 of TMA (personal return) which includes a self-assessment which includes tax on the relevant payment as tax treated as deducted;</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(c) HMRC receive—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(i) an amended return under section 9ZA of TMA (amendment of personal or trustee return by taxpayer), or</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(ii) a claim under section 33 of TMA (error or mistake),</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">which includes tax on the relevant payment as tax treated as deducted;</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(d) HMRC receive a letter of offer.</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(6) In paragraph (5)—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">“letter of offer” means an offer in writing by the employer to agree an amount in settlement of the employer's liability to pay an amount that includes tax on the relevant payment;</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">“tax treated as deducted” has the meaning given by regulation 185(6)." <span style="color:#331FDD; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal">(SI 2003/2682 r.72E)</span></p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">&#8203;</p>
+      </div>
+      <div class="anchor" id="meaningofselfassessed"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Meaning of self-assessed</span></h3>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"(7) For the purposes of this regulation tax is self-assessed if—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) it is included in a return under section 8 of TMA which includes a self-assessment; and</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) ignoring any relevant credit, the tax is or would be assessed as payable by way of income tax.</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(8) In paragraph (7), “relevant credit” means—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a) a payment made under section 59A of TMA (payments on account of income tax) or 59B (payment of income tax and capital gains tax); or</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b) tax deducted at source or tax treated as deducted (within the meaning given by regulation 185(6))." <span style="color:#331FDD; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal">(SI 2003/2682 r.72E)</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="font-size:15px; letter-spacing:normal">​</span></p>
+      </div>
+      <div class="anchor" id="interplaybetweenr72fandr80"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">- Interplay between r.72F and r.80</span></h3>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">“(3A) A determination under this regulation must not include tax in respect of which a direction under regulation 72F has been made.” </span><span style="color:#2E10EB; letter-spacing:normal">(r.80(3A)).</span><br>
+ </p>
+      </div>
+      <div class="anchor" id="formandeffectofr72fdirection"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Form and effect of r.72F direction</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">"(1) Where this regulation applies, HMRC may direct that the employer is not liable to pay an amount of tax to them.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(2) The direction may be in respect of one or more amounts that appear to HMRC to fall within regulation 72E(1)(b)(i) and (ii).</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(3) A direction must be made by notice to both the employer and the employee, stating—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) the date the notice was issued;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">[(b) the—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(i) amount (or amounts) within regulation 72E(1)(b) to which it relates, or</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(ii) employment in respect of which the relevant payment within regulation 72E(1)(a) was received and in respect of which the amount within regulation 72E(1)(b)(i) is likely to have been self-assessed, and</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(c) which of conditions A, B and C in regulation 72E have been met.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(4) A direction may be combined with one or more other directions relating to the same employer and may be made by issuing one notice to the employer, but each employee must be issued with a separate notice.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(5) A notice need not be issued to the employee if neither HMRC nor the employer are aware of the employee's address or last known address.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(6) The amount specified in a notice to the employee must not be added under regulation 185(5) or 188(3)(a) (adjustments to total net tax deducted for self-assessments and other assessments) in relation to the employee." <span style="color:#331FDD; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal">(SI 2003/2682 r.72F)</span></p>
+        <p class="font_8" style="font-size:15px; line-height:21px; letter-spacing:normal"><span style="font-size:15px">​</span></p>
+      </div>
+      <div class="anchor" id="employeeappealagainstr72fdirection"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="font-size:20px; line-height:28px; letter-spacing:normal"><span style="font-size:20px">- Employee appeal against r.72F direction</span></h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">&#8203;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">"(1) An employee may appeal against a direction notice under regulation 72F—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) by notice to HMRC,</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) within 30 days of the issue of the direction notice,</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(c) specifying the grounds of the appeal.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(2) For the purposes of paragraph (1) the grounds of appeal are that—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) the employee did not receive a relevant payment;</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) the amount specified in the notice is incorrect, because all or part of it did not fall within regulation 72E(1)(b)(i) or (ii);</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(c) no trigger event within regulation 72E(5) occurred; or</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(d) a trigger event within regulation 72E(5) occurred before 6th April 2008.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(3) On an appeal under paragraph (1) [that is notified to the tribunal, the tribunal]2 may—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a) if it appears that the direction should not have been made, set aside the direction; or</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b) if it appears that the amount specified in the notice is incorrect, increase or reduce the amount accordingly."</p>
+        <p class="font_8" style="font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="liabilityofmanagedservicecompanydirectorsandproviders"></div>
+      <div class="rich-text" style="margin-top:3px">
+        <h2 class="font_2 bh-sec" style="font-size:29px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">Liability of managed service company directors and providers </span></h2>
+        <p class="font_8" style="font-size:15px; line-height:normal; letter-spacing:normal"><span style="letter-spacing:normal">​</span></p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">"(1)     PAYE regulations may make provision authorising the recovery from a person within subsection (2) of any amount that an officer of Revenue and Customs considers should have been deducted by a managed service company (“the MSC”) from a payment of, or on account of, PAYE income of an individual.</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(2)     The persons are—</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(a)     a director or other office-holder, or an associate, of the MSC,</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(b)     an MSC provider,</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(c)     a person who (directly or indirectly) has encouraged or been actively involved in the provision by the MSC of the services of the individual, and</p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">(d)     a director or other office-holder, or an associate, of a person (other than an individual) who is within paragraph (b) or (c)." <span style="color:#012AF7">(ITEPA 2003, s.688A(1) - (2))</span></p>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">&#8203;</p>
+      </div>
+      <div class="anchor" id="exclusionforadvisersandplacers"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">- Exclusion for advisers and placers</h3>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"(3)     A person does not fall within subsection (2)(c) merely by virtue of—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(a)     providing legal or accountancy advice in a professional capacity, or</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(b)     placing the individual with persons who wish to obtain the services of the individual (including by contracting with the MSC for the provision of those services)." <span style="color:#012AF7">(ITEPA 2003, s.688A(3))</span></p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">&#8203;</p>
+      </div>
+      <div class="anchor" id="definitions"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">- Definitions</h3>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"(5)     In this section—</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">“associate” has the meaning given by section 61I,</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">“director” has the meaning given by section 67,</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">“managed service company” has the meaning given by section 61B but for the purposes of section 339A has the meaning given by subsection (11) of that section, and</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">“MSC provider” means an MSC provider who is involved with the MSC (within the meaning of section 61B).</p>
+        <p class="font_9" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">(6)     Section 61C(4) (extended meaning of “associate”) applies for the purposes of subsection (2)(d)." <span style="color:#012AF7">(ITEPA 2003, s.688A(5) - (6))</span></p>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:normal; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="stilladirectorevenifindividualdidnotpaymuchattentiontoappoin"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">- Still a director even if individual did not pay much attention to appointment</h3>
+        <h3 class="font_3" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">​</h3>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"[21] It is not disputed that Mr Gradidge was appointed as a director and registered as such at Companies’ House. Although it was suggested that this was something that was done without his knowledge or permission, and possibly that the circumstances should be regarded as TAL (or a person associated with them) being the director under an assumed name, I consider that the evidence put to the Tribunal is such that it is more likely that Mr Gradidge simply did not pay particular attention to the arrangements that were put in place. This is because it was clear that he knew that the arrangements involved his being paid via a limited company, as his evidence was that he had made enquiries of HMRC as to whether this was permitted. Mr Gradidge agreed that he had completed various forms at the time, which he recalled as being “something to do with giving them permission to deal with tax and stuff like that” and also that he thought TAL would “deal with it all”."<a href="https://www.bailii.org/uk/cases/UKFTT/TC/2022/ukftt_tc_2022_189.html" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline"> (Gradidge v. HMRC [2022] UKFTT 189 (TC), Judge Fairpo)</span></a></p>
+        <h3 class="font_3" style="margin-left:160px; font-size:20px; line-height:28px; letter-spacing:normal">​</h3>
+      </div>
+      <div class="anchor" id="neednotbeacurrentdirector"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">- Need not be a current director</h3>
+        <h3 class="font_3" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">​</h3>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"[24] s688A(1) and (2) is written in the present tense. This is not unusual in legislation. It states (in summary) that a relevant debt can be transferred to one of a range of specified persons, including a director of the relevant company. <br>
+[25] Having reviewed the evidence and submissions, I consider that the approach taken in RCI Europe, referred to by HMRC, applies equally to ITEPA 2003 as it did to the Social Security Contributions and Benefits Act 1992 which was the subject of that decision. In particular, s688A(2) is also a “definition section with no specific temporal requirements” and the definitions “are categories of” person, as noted in RCI Europe at [356.<br>
+[26] Although RCI Europe was referring to the definition of an employee, rather than a director, the decision noted particularly that the legislation overall did not support the contention that a person should escape liability simply because they had ceased to be an employee. I consider that s688A(2) should be interpreted in the same way, being a definition section and defining categories of person rather than specifying particular periods of time. I consider that the use of the present tense in s688A(2) does not preclude the issue of a debt transfer notice to a former director of the relevant company.<br>
+[27] I therefore find that there is no temporal aspect to s688A(2), requiring a director to have been in office at the date of the issue of the notice and, as I have found that Mr Gradidge was a director of the Company, the DTN was therefore correctly issued and is upheld." <a href="https://www.bailii.org/uk/cases/UKFTT/TC/2022/ukftt_tc_2022_189.html" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; text-decoration:underline">(Gradidge v. HMRC [2022] UKFTT 189 (TC), Judge Fairpo)</span></a></p>
+        <h3 class="font_3" style="margin-left:40px; font-size:20px; line-height:28px; letter-spacing:normal">​</h3>
+      </div>
+      <div class="anchor" id="companywithnoformaldirectorssoleshareholderisdirector"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">- Company with no formal directors: sole shareholder is director</h3>
+        <h3 class="font_3" style="margin-left:80px; font-size:20px; line-height:28px; letter-spacing:normal">​</h3>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">"[29] At the date of the debt transfer notice, Mr Gradidge was the sole member of the Company and there was no director or other officer appointed. He was, therefore, the only person who had standing to make decisions regarding the Company. Accordingly, I find that the Company was managed by its sole member and therefore that Mr Gradidge was a director of the Company for the purposes of s688A at the time that the DTN was served.</p>
+        <p class="font_8" style="margin-left:120px; font-size:15px; line-height:21px; letter-spacing:normal">[30] Accordingly, even if it were the case that s688A(2) should be regarded as having a temporal requirement, Mr Gradidge remained a director for the purposes of s688A at the time that the DTN was issued and so the DTN was correctly issued and is upheld." <a href="https://www.bailii.org/uk/cases/UKFTT/TC/2022/ukftt_tc_2022_189.html" target="_blank" rel="noreferrer noopener"><span style="color:#8B0000; font-size:15px; font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif; font-weight:400; font-style:normal; text-decoration:underline">(Gradidge v. HMRC [2022] UKFTT 189 (TC), Judge Fairpo)</span></a></p>
+        <h3 class="font_3" style="margin-left:40px; font-size:20px; line-height:28px; letter-spacing:normal">​</h3>
+      </div>
+      <div class="anchor" id="hmrcpower"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:28px; letter-spacing:normal">- HMRC power</h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">"(1)     This regulation applies if—</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(a)     a managed service company has a relevant PAYE debt or a relevant apprenticeship levy debt, and</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(b)     an officer of Revenue and Customs is of the opinion that the relevant PAYE debt or the relevant apprenticeship levy debt or a part of the relevant PAYE debt or part of the relevant apprenticeship levy debt (the “specified amount”) is irrecoverable from the managed service company within a reasonable period.</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(2)     HM Revenue and Customs may make a direction authorising the recovery of the specified amount from the persons specified in section 688A(2) (managed service companies: recovery from other persons).</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">(3)     Upon the making of a direction under paragraph (2), the persons specified in section 688A(2) become jointly and severally liable for the relevant PAYE debt or the relevant apprenticeship levy debt, but subject to what follows." <span style="color:#012AF7">(SI 2003/2682, r.97C(1) - (3))</span></p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="hmrcmustserveatransfernotice"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:28px; letter-spacing:normal">- HMRC must serve a transfer notice</h3>
+        <p class="font_9" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">"(4)     HM Revenue and Customs may not recover the specified amount from any person in accordance with a direction made under paragraph (2) until they have served a notice (a “transfer notice”) on the person in question (the “transferee”)." <span style="color:#012AF7">(SI 2003/2682, r.97C(4))</span></p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">&#8203;</p>
+      </div>
+      <div class="anchor" id="timelimitforservingtransfernotice"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:200px; font-size:20px; line-height:28px; letter-spacing:normal">- Time limit for serving transfer notice</h3>
+        <h3 class="font_3" style="margin-left:200px; font-size:20px; line-height:28px; letter-spacing:normal">​</h3>
+        <p class="font_9" style="margin-left:240px; font-size:15px; line-height:21px; letter-spacing:normal">See r.97D.</p>
+        <h3 class="font_3" style="margin-left:120px; font-size:20px; line-height:28px; letter-spacing:normal">​</h3>
+      </div>
+      <div class="anchor" id="powertoacceptloweramount"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:28px; letter-spacing:normal">- Power to accept lower amount</h3>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">"(5)     If an officer of Revenue and Customs is of the opinion that it is appropriate to do so, HM Revenue and Customs may accept an amount less than the specified amount (the “lower amount”) from a transferee; but this acceptance shall not prejudice the recovery of the specified amount from any other transferee." <span style="color:#012AF7">(SI 2003/2682, r.97C(5))</span></p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="onlypost6january2008debts"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:28px; letter-spacing:normal">- Only post 6 January 2008 debts</h3>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">"(6)     HM Revenue and Customs may not serve a transfer notice on a person mentioned in section 688A(2)(c), or on a paragraph (c) associate, if the relevant PAYE debt is incurred before 6th January 2008." <span style="color:#012AF7">(SI 2003/2682, r.97C(6))</span></p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="limitedforpersonwhoencouragedorwereinvolvedinprovisionbymsco"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:28px; letter-spacing:normal">- Limited for person who encouraged or were involved in provision by MSC of services of individual</h3>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(7)     HM Revenue and Customs may not serve a transfer notice on a person mentioned in section 688A(2)(c), or on a paragraph (c) associate, unless an officer of Revenue and Customs certifies that, in his opinion, it is impracticable to recover the specified amount from persons mentioned in paragraphs (a) and (b) of section 688A(2) and from paragraph (b) associates.</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(8)     In determining, for the purposes of paragraph (7), whether it is impracticable to recover the specified amount from persons mentioned in paragraphs (a) and (b) of section 688A(2) and from paragraph (b) associates, the officer of Revenue and Customs may have regard to all managed service companies in relation to which a person is a person mentioned in paragraph (a) or (b) of section 688A(2) or a paragraph (b) associate.</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(9)     In determining which of the persons mentioned in section 688A(2)(c) and which of the paragraph (c) associates are to be served with transfer notices and the amount of those notices, HM Revenue and Customs must have regard to the degree and extent to which those persons are persons who (directly or indirectly) have encouraged or been actively involved in the provision by the managed service company of the services of the individual mentioned in that provision." <span style="color:#012AF7">(SI 2003/2682, r.97C(7) - (9))</span></p>
+        <p class="font_8" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="appealagainsttransfernotice"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:40px; font-size:20px; line-height:28px; letter-spacing:normal">- Appeal against transfer notice</h3>
+        <p class="font_8" style="margin-left:40px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">"(1)     A transferee may appeal against the transfer notice." <span style="color:#012AF7">(SI 2003/2682, r.97G(1))</span></p>
+        <p class="font_9" style="margin-left:80px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="timelimit30days"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:28px; letter-spacing:normal">- Time limit: 30 days</h3>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">"(2)     A notice of appeal must—</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(a)     be given to HM Revenue and Customs at the address specified in the transfer notice within 30 days beginning with the date on which the transfer notice was served, and</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(b)     specify the grounds of the appeal." <span style="color:#012AF7">(SI 2003/2682, r.97G(2))</span></p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+      <div class="anchor" id="groundsofappeal"></div>
+      <div class="rich-text">
+        <h3 class="font_3 bh-point" style="margin-left:120px; font-size:20px; line-height:28px; letter-spacing:normal">- Grounds of appeal</h3>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">"(3)     The grounds of appeal are any of the following—</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(a)     that the relevant PAYE debt (or part of the relevant PAYE debt) or the relevant apprenticeship levy debt (or part of the relevant apprenticeship levy debt) is not due from the managed service company to HM Revenue and Customs;</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(b)     that the specified amount does not relate to a company which is a managed service company;</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(c)     that the specified amount is not irrecoverable from the managed service company within a reasonable period;</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(d)     that the transferee is not a person mentioned in section 688A(2);</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(e)     that the transferee was not a person mentioned in section 688A(2) during the tax periods to which the specified amount relates;</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(f)     that the transferee was not a person mentioned in section 688A(2) during some part of the tax periods to which the specified amount relates;</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(g)     that the transfer notice was not served before the end of the period specified in regulation 97D;</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(h)     that the transfer notice does not satisfy the requirements specified in regulation 97E;</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(j)     in the case of a transferee mentioned in section 688A(2)(c) or of a paragraph (c) associate, that it is not impracticable to recover the specified amount from persons mentioned in paragraphs (a) and (b) of section 688A(2) or from paragraph (b) associates;</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(k)     in the case of a transferee mentioned in section 688A(2)(c) or of a paragraph (c) associate, that the amount specified in the transfer notice does not have regard to the degree and extent to which the transferee is a person who (directly or indirectly) has encouraged or been actively involved in the provision by the managed service company of the services of the individual mentioned in that provision.</p>
+        <p class="font_9" style="margin-left:160px; font-size:15px; line-height:21px; letter-spacing:normal">(4)     Paragraph (3)(a) is subject to regulation 97H(4)." <span style="color:#012AF7">(SI 2003/2682, r.97G(3) - (4))</span></p>
+        <p class="font_8" style="font-size:15px; line-height:21px; letter-spacing:normal">​</p>
+      </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__text">
+      <p><span class="color_14">&nbsp;&copy; 2026</span><span class="color_14">&nbsp;by Michael Firth KC, Gray's Inn Tax Chambers</span></p>
+      <p><span class="color_14">This website does not give legal advice. Users use it at their own risk.</span></p>
+    </div>
+    <div class="site-footer__logo">
+      <img src="https://static.wixstatic.com/media/3a5390_32cd9895492045bfbe897dd23754e6db~mv2.jpg/v1/fill/w_123,h_96,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Designer_edited.jpg" alt="" width="123" height="96" loading="lazy">
+    </div>
+  </div>
+</footer>
+
+<script src="toc.js" defer></script>
+<script src="nav-data.js"></script>
+<script src="nav-menu.js"></script>
+</body>
+</html>

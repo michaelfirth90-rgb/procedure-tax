@@ -1,0 +1,43 @@
+/* ==========================================================================
+   procedure.tax — web fonts.
+
+   These are the faces the original site uses, still served from Wix's CDN
+   (static.parastorage.com), exactly as the original loads them. They are
+   commercially licensed faces: this file points at the same URLs the live
+   site does and does not copy or re-host the font data. If the site moves off
+   Wix, these will need to be licensed and self-hosted, or swapped for the
+   fallbacks already listed in proceduretax.css.
+
+   Extracted verbatim from the export's own @font-face rules.
+   ========================================================================== */
+
+
+@font-face {font-family: 'brandon-grot-w01-light'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/fonts/v2/fe0edf38-314c-46d5-b570-a37546d197e4/v1/brandon-grot-w05-light.woff2') format('woff2'); unicode-range: U+0100-0130, U+0132-0151, U+0154-015F, U+0162-0177, U+0179-017C, U+01FA-01FF, U+0218-021B, U+0237, U+02C7, U+02C9, U+02D8-02DB, U+02DD, U+037E, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE, U+0400-045F, U+0490-0491, U+1E80-1E85, U+1E9E, U+1EF2-1EF3, U+2044, U+2070, U+2074-2079, U+2080-2089, U+20B4, U+20BD, U+2113, U+2117, U+2126, U+212E, U+2153-2154, U+215B-215E, U+2202, U+2206, U+220F, U+2211-2212, U+2215, U+2219-221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+25CA, U+F8FF, U+FB01-FB02;font-display: swap; }
+
+@font-face {font-family: 'brandon-grot-w01-light'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/fonts/v2/fe0edf38-314c-46d5-b570-a37546d197e4/v1/brandon-grot-w01-light.woff2') format('woff2'); unicode-range: U+0002, U+0009-000A, U+000D, U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+0160-0161, U+0178, U+017D-017E, U+0192, U+02C6, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+20AC, U+2122;font-display: swap; }
+
+@font-face {font-family: 'cormorantgaramond-semibold'; font-style: italic; font-weight: 700; src: url('https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v5/zuqx3k1yUEl3Eavo-ZPEAoWXH9gdibkBmfnjU2pcZcs.woff2') format('woff2');font-display: swap; }
+
+@font-face {font-family: 'cormorantgaramond-semibold'; font-style: italic; font-weight: 400; src: url('https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v5/zuqx3k1yUEl3Eavo-ZPEAoNfVaeyxI1fRb3LCiKLt24.woff2') format('woff2');font-display: swap; }
+
+@font-face {font-family: 'cormorantgaramond-semibold'; font-style: normal; font-weight: 700; src: url('https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v5/iEjm9hVxcattz37Y8gZwVVYUpUlN7yzNHgIMH66hSOI.woff2') format('woff2');font-display: swap; }
+
+@font-face {font-family: 'cormorantgaramond-semibold'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/cormorantgaramond/v5/iEjm9hVxcattz37Y8gZwVVBiiiFZ1SMKhjDurTuPCI4.woff2') format('woff2');font-display: swap; }
+
+@font-face {font-family: 'din-next-w01-light'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/fonts/v2/eca8b0cd-45d8-43cf-aee7-ca462bc5497c/v1/din-next-w10-light.woff2') format('woff2'); unicode-range: U+0401-040C, U+040E-044F, U+0451-045C, U+045E-045F, U+0490-0491, U+2116;font-display: swap; }
+
+@font-face {font-family: 'din-next-w01-light'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/fonts/v2/eca8b0cd-45d8-43cf-aee7-ca462bc5497c/v1/din-next-w02-light.woff2') format('woff2'); unicode-range: U+000D, U+0100-010F, U+0111-0130, U+0132-0151, U+0154-015F, U+0162-0177, U+0179-017C, U+01FA-01FF, U+0218-021B, U+0237, U+02C9, U+02D8-02D9, U+02DB, U+02DD, U+0394, U+03A9, U+03C0, U+1E80-1E85, U+1EF2-1EF3, U+2070, U+2074-2079, U+2080-2089, U+2113, U+2126, U+212E, U+2153-2154, U+215B-215E, U+2202, U+2206, U+220F, U+2211-2212, U+2215, U+2219-221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+25CA, U+F8FF, U+FB00-FB04;font-display: swap; }
+
+@font-face {font-family: 'din-next-w01-light'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/fonts/v2/eca8b0cd-45d8-43cf-aee7-ca462bc5497c/v1/din-next-w01-light.woff2') format('woff2'); unicode-range: U+0020-007E, U+00A0-00FF, U+0110, U+0131, U+0152-0153, U+0160-0161, U+0178, U+017D-017E, U+0192, U+02C6-02C7, U+02DA, U+02DC, U+03BC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122;font-display: swap; }
+
+@font-face {font-family: 'droid-serif-w01-regular'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/fonts/v2/85306570-bb65-495b-97a4-98aea9e7b1d5/v1/droid-serif-w10-regular.woff2') format('woff2'); unicode-range: U+0393, U+03A0, U+03A6, U+0401-040C, U+040E-044F, U+0451-045C, U+045E-045F, U+0490-0491, U+2116;font-display: swap; }
+
+@font-face {font-family: 'droid-serif-w01-regular'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/fonts/v2/85306570-bb65-495b-97a4-98aea9e7b1d5/v1/droid-serif-w02-regular.woff2') format('woff2'); unicode-range: U+0100-012B, U+012E-0130, U+0132-0137, U+0139-0149, U+014C-0151, U+0154-015F, U+0162-0177, U+0179-017C, U+0218-0219, U+02C9, U+02D8-02D9, U+02DB, U+02DD, U+0394, U+03A9, U+03BC, U+03C0, U+2113, U+2126, U+212E, U+2202, U+2206, U+220F, U+2211-2212, U+221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+25CA, U+FB01-FB02;font-display: swap; }
+
+@font-face {font-family: 'droid-serif-w01-regular'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/fonts/v2/85306570-bb65-495b-97a4-98aea9e7b1d5/v1/droid-serif-w01-regular.woff2') format('woff2'); unicode-range: U+000D, U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+0160-0161, U+0178, U+017D-017E, U+0192, U+02C6-02C7, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122;font-display: swap; }
+
+@font-face {font-family: 'futura-lt-w01-book'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/fonts/v2/790166f1-b347-4f16-8a29-f0c4931a7c35/v1/futura-lt-w01-book.woff2') format('woff2'); unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00FF, U+0110, U+0131, U+0152-0153, U+0160-0161, U+0178, U+017D-017E, U+0192, U+0237, U+02C6-02C7, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122;font-display: swap; }
+
+@font-face {font-family: 'futura-lt-w01-light'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/fonts/v2/8e5b5cbc-6ad9-49f7-aee7-4e5133c3ee4d/v1/futura-lt-w05-light.woff2') format('woff2'); unicode-range: U+0100-010F, U+0111-012B, U+012E-0130, U+0132-0137, U+0139-0149, U+014C-0151, U+0154-015F, U+0162-0177, U+0179-017C, U+0218-021B, U+02C9, U+02D8-02D9, U+02DB, U+02DD, U+0394, U+03A9, U+03BC, U+03C0, U+1E9E, U+20B9-20BA, U+20BC-20BD, U+2113, U+2126, U+212E, U+2202, U+2206, U+220F, U+2211-2212, U+2215, U+2219-221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+25CA, U+F8FF, U+FB01-FB02;font-display: swap; }
+
+@font-face {font-family: 'futura-lt-w01-light'; font-style: normal; font-weight: 400; src: url('https://static.parastorage.com/fonts/v2/8e5b5cbc-6ad9-49f7-aee7-4e5133c3ee4d/v1/futura-lt-w01-light.woff2') format('woff2'); unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00FF, U+0110, U+0131, U+0152-0153, U+0160-0161, U+0178, U+017D-017E, U+0192, U+0237, U+02C6-02C7, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122;font-display: swap; }
