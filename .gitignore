@@ -1,0 +1,16 @@
+# Backups and editor state — no reason to publish or version these.
+_backup-before-restructure/
+_backup-before-nav/
+_to_delete/
+_pgbackup/
+_pginfo/
+
+# Pinegrow project file. Remove this line if you want it versioned; it is
+# useful to keep, but it is also the file Pinegrow locks while it is open.
+pinegrow.json
+
+# macOS / iCloud noise
+.DS_Store
+.AppleDouble
+Icon?
+._*
