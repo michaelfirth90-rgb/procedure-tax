@@ -17,3 +17,9 @@ Icon?
 
 # Pre-sweep snapshot — kept on disk, not published.
 _backup-before-sweep/
+
+# Generated chapter index — not part of the site.
+_new-structure.md
+
+# Stale AVIF saved from the Wix CDN; superseded by favicon.ico/logo.png.
+favicon.jpg
