@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.procedure.tax/sitemap.xml
+Sitemap: https://procedure.tax/sitemap.xml
