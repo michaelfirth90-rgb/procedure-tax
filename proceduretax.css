@@ -929,3 +929,147 @@ a { color: inherit; }
   .tc-head { font-size: 16px; }
   .tc-group { padding: 9px 13px 10px; }
 }
+/* --------------------------------------------------------------------------
+   The litigation report's tables, recreated from the pictures they were.
+
+   Same visual language as the penalty-rate tables on X06 — green header bar,
+   banded rows, futura — but these run to nine columns and a two-level header,
+   so the fixed three-equal-column layout does not apply. Rules are drawn, as
+   they are in the pictures: across nine columns of figures, banding alone does
+   not hold a row together.
+
+   Specificity note: the base .content-table th rule sets white, centred text
+   for the header bar. Every rule below that has to beat it — including the one
+   that stops the total row being white on white — is written at two classes
+   so it does, without reaching for !important.
+   ========================================================================== */
+
+/* Full text width, centred, with a margin each side. The prose in this column
+   is indented 40px, so 40px either side puts the table's left edge on the same
+   line as the text it sits under and leaves the same air on the right. */
+.content-table.content-table--report {
+  width: calc(100% - 80px);
+  max-width: none;
+  table-layout: fixed;      /* the colgroup decides, not the longest cell */
+  margin: 20px auto 34px;
+  border: 1px solid rgba(120, 175, 125, 0.55);
+}
+
+.content-table--report caption {
+  margin: 0 0 7px;
+  font: normal 14px/19.6px futura-lt-w01-light, sans-serif;
+  color: rgb(var(--color_2));
+  text-align: left;
+}
+
+.content-table--report th,
+.content-table--report td {
+  padding: 5px 11px;
+  border: 1px solid rgba(120, 175, 125, 0.35);
+}
+
+/* The header takes the site's own sweep — the navy-to-green of the masthead
+   and the page title. It goes on <thead>, not on the cells: a background is
+   painted inside its own box, so a gradient per cell would restart in every
+   column and read as stripes rather than one sweep across the table.
+
+   White on it is 12.9:1 at the navy end and 6.07:1 at the green, both well
+   past the floor, which the flat --color_32 bar underneath was not. The
+   fallback is the same gradient written out, for a page loaded without
+   brand-sweep.css. */
+.content-table--report thead {
+  background-image: var(--title-sweep,
+                    linear-gradient(90deg, #0A2E6E 0%, #1F712F 100%));
+}
+
+.content-table--report thead th {
+  background: transparent;
+  color: #fff;
+  vertical-align: bottom;
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+/* the merged first cell spans both header rows: centre it in its own height */
+.content-table--report thead th[rowspan] { vertical-align: middle; }
+
+/* Column headings read left-aligned, as they do in the originals. Right-
+   aligning them to match the figures below breaks the multi-word ones badly:
+   "Reversal to HMRC" wraps to a ragged left edge and stops scanning as one
+   label. A group heading spanning several columns keeps the centred setting of
+   the base rule, which is also what the originals do — hence [colspan], which
+   only the group headings carry. */
+.content-table.content-table--report thead th:not([colspan]) { text-align: left; }
+
+/* the first column names its row: a heading to a screen reader, but set as
+   body text, not shouted */
+.content-table--report tbody th,
+.content-table--report tfoot th {
+  font: normal 14px/19.6px futura-lt-w01-light, sans-serif;
+  color: rgb(var(--color_2));
+  text-align: left;
+}
+
+/* "Taxpayer", "HMRC", "Combinations" — a band across the table, rather than a
+   row of six empty cells */
+.content-table--report .tr-section th {
+  background: rgba(172, 227, 183, 0.5);
+  font: normal 15px/21px var(--font-futura);
+  color: rgb(var(--color_2));
+  text-align: left;
+  letter-spacing: .01em;
+}
+
+/* Banding is written on the row by the builder, not by :nth-child — a section
+   band is itself a row, and counting it flips the alternation halfway down the
+   representatives table. Both classes are named so these beat the base
+   .content-table tbody tr:nth-child(odd) rule, which is otherwise the more
+   specific of the two and leaves the two schemes fighting. */
+.content-table.content-table--report tbody tr { background: transparent; }
+.content-table.content-table--report tbody tr.band { background: rgba(172, 227, 183, 0.23); }
+
+.content-table--report tfoot th,
+.content-table--report tfoot td {
+  background: rgba(172, 227, 183, 0.4);
+  font-weight: 600;
+}
+
+/* alignment, at two classes so it beats the base header rule */
+.content-table--report .ta-left   { text-align: left; }
+.content-table--report .ta-center { text-align: center; }
+.content-table--report .ta-right  { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Nine columns of figures will not fit a phone. Rather than shrink the type to
+   illegibility, the table scrolls sideways inside its own box. */
+/* On a phone the 40px inset each side is 80px that the figures need more than
+   the margin does, so the table takes the full column and scrolls sideways
+   inside its own box rather than shrinking the type to illegibility. */
+@media (max-width: 900px) {
+  .content-table.content-table--report {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* -------------------------------------------------------------- pictures */
+/* Kept for any picture the site still carries — the tables on the litigation
+   report are HTML now, but the converter emits a figure for every image
+   component, so the rules stay. Placed at its measured offset in the column,
+   and allowed to shrink rather than overflow a narrow screen. */
+
+.page-image {
+  margin: 0 0 0 var(--img-off, 0px);
+  max-width: 100%;
+}
+
+.page-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  .page-image { margin-left: 0; }
+}
