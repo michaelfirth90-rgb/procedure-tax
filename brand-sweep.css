@@ -1,0 +1,202 @@
+/* ==========================================================================
+   procedure.tax — the brand sweep, in the four places it belongs.
+   Additive. Delete the two <link> tags and the site is exactly as it was; the
+   only edit inside a page is data-menu-pos on <body>.
+
+     1. the page title
+     2. the masthead — "Procedure.Tax" and "Tax Compliance and Appeals Handbook"
+     3. the PART headers in the vertical menu on the index page
+
+   THE COLOURS ARE THE SITE'S OWN. The masthead is already a pair:
+   .site-title__main is rgb(19,104,232) and .site-title__sub is rgb(47,170,71),
+   which is also the colour .page-title is painted in today. So the sweep runs
+   blue to green, as vat.law runs blue to purple and checklists red to purple.
+
+   That green is 3.02:1 on white, against a 3.0 floor for text this size — it
+   passes by 0.02, which is a rounding error rather than a decision. The palette
+   already holds a darker green, --color_34 at rgb(31,113,47), at 6.07:1.
+
+   The first attempt started at the masthead blue and it read flat, because the
+   eye reads LIGHTNESS travel and there was almost none in it: #1368E8 is L .55
+   and #1F712F is L .48. Starting from a navy nearly doubles the distance.
+
+     sweep                      dE     lightness      contrast on white
+     A  #1368E8 -> #2FAA47    33.6   .55 -> .65     5.0:1 / 3.02:1   masthead pair
+     B  #0A2E6E -> #2FAA47    41.3   .32 -> .65    12.9:1 / 3.02:1   navy start
+     C  #0A2E6E -> #1F712F    26.3   .32 -> .48    12.9:1 / 6.07:1   navy, darker green
+
+   C is now the default: both ends dark, which is what the masthead and the page
+   title wanted. It gives up about a third of B's travel and buys a green end at
+   6.07:1 instead of 3.02:1, which is the right trade for text this size.
+
+   A and B are kept for reference. Put data-title-sweep="a" or "b" on <html>
+   to try one; with no attribute the site gets C.
+   ========================================================================== */
+
+:root,
+html[data-title-sweep="c"] {
+  --title-sweep: linear-gradient(90deg, #0A2E6E 0%, #1F712F 100%);
+  --title-ink: #154F4F;
+}
+html[data-title-sweep="b"] {
+  --title-sweep: linear-gradient(90deg, #0A2E6E 0%, #2FAA47 100%);
+  --title-ink: #1C6C5B;
+}
+html[data-title-sweep="a"] {
+  --title-sweep: linear-gradient(90deg, #1368E8 0%, #2FAA47 100%);
+  --title-ink: #218998;
+}
+
+/* Every swept element sizes its box to its own text. A background is only
+   painted inside its own box, so a sweep on a full-width block gives a short
+   label the blue beginning and nothing else. Measured on this site: the PART
+   headers are 157-244px of text in a 405px menu, and "Procedure.Tax" is about
+   230px in a 431px masthead — so without this, every one of them would show
+   roughly the first half of the gradient and none would reach the green. */
+
+/* ---- 1. Page title ------------------------------------------------------
+   .page-title is `width: var(--title-w, 321px)` and every page carries the
+   same inline --title-w:321px. Measured across all 317 titles in nav-data.js:
+   median 497px, longest 787px. So most titles do not fit and are wrapping to
+   three lines in a 975px column. fit-content with a 680px cap puts about nine
+   in ten back on one line; --title-off stops being used and the auto margins
+   land the box within 1px of where it sits now.                            */
+
+.page-title {
+  width: fit-content;
+  max-width: min(100%, 680px);
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+  background-image: var(--title-sweep);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.page-title span, .page-title a { color: inherit; }
+
+/* ---- 2. Masthead --------------------------------------------------------
+   Both lines are display:block at 431px. Each takes its own sweep rather than
+   one gradient across the pair, because a background stops at its own box and
+   a shared one would leave the longer line's tail uncoloured.
+
+   The padding with an equal negative margin is for the italic: an italic's
+   glyphs overhang the inline box, so without it the tail of "Handbook" comes
+   out half-painted.                                                        */
+
+.site-title__main,
+.site-title__sub {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0.16em;
+  background-image: var(--title-sweep);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+/* The masthead box is the original Wix geometry: position:absolute, left:274px,
+   width:431px. The subtitle needs 467px, so it has always wrapped, and the
+   wrapped line then shows only a slice of the gradient while the line above
+   shows all of it. Sizing the box to its content puts the subtitle on one line
+   and gives both lines the same sweep. Re-centred on the column, which moves it
+   2px from where it sits now (its old centre was 489.5 in a 975px column). */
+@media (min-width: 1001px) {
+  .site-title {
+    width: max-content;
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.site-title__main { margin-bottom: 0; }
+.site-title__sub  { text-decoration: none; }
+.site-title__sub:hover { text-decoration: underline; text-decoration-color: #2FAA47; }
+
+/* ---- 3. The vertical menu -----------------------------------------------
+   Nothing here, and nothing in menu-sweep.css either. The menu keeps the eight
+   Part colours nav-colour.css gives it. They are the strongest wayfinding cue
+   on the index page and a single sweep was a poor trade for them.           */
+
+/* ---- 3b. The contents card and the rail on an inner page ----------------
+   Both are already driven from --wash / --edge / --anchor by nav-colour.css, so
+   menu-sweep.css's body[data-menu-pos] block recolours them for free: a page
+   under the first row of the menu shades blue, one under the last shades green,
+   and the shading says where in the book you are.
+
+   Two things were NOT on those tokens and had to be moved onto them. The
+   category rules in the card and the rail were --cat-red, rgb(139,0,0) — the
+   site's case-citation red, which is right for a citation and wrong as the only
+   fixed colour in a page that is otherwise a slice of the sweep. Same for the
+   "you are here" mark in the rail.
+
+   The shading is the anchor at 4% alpha, not a pale opaque tint, so the card
+   reads as sitting on the page rather than covering a block of it. The border
+   is the same colour at 14%. At this strength the panel is a hint rather than a
+   block — the tint is doing about as little as it can while still being there
+   at all, and the border is now carrying most of the shape.                 */
+
+/* One gap between the page title and the contents card, instead of 264 inline
+   ones. They ranged from 1px to 105px — measured values captured off the
+   original Wix render, page by page, with no clustering at all: 18 pages under
+   10px, 36 over 50px, median 25px. A 1px gap put the card hard against the
+   title on T08; 105px left a hole on V14.
+
+   28px is a little above the median. It was invisible before because the
+   titles were three lines deep and the gap read as part of a tall header;
+   with the titles on one line it reads as an error.
+
+   This only bites once the inline margin-top is off the <nav> — an inline
+   style beats a stylesheet. strip_toc_margin.py does that. */
+
+/* margin, not margin-top: proceduretax.css gives the card `margin: 0 0 34px`,
+   and that 34px does NOT collapse with the next block's margin — an anchor div
+   sits between them — so leaving it in place made the gap below 62px when the
+   rule below asks for 28. Zeroing it lets one value own each side. */
+/* display: flow-root is load-bearing. The last .tc-group inside the card has
+   `margin: 0 0 7px`, and with nothing to contain it that margin escaped the
+   card and pushed the next block down — so a rule asking for 28 measured 35.
+   flow-root makes the card a block formatting context, which keeps its
+   children's margins inside it. Nothing about the appearance changes. */
+.toc-card { margin: 28px 0 0; display: flow-root; }
+
+/* And the same below it. The gap under the card is the inline margin-top on the
+   first body block, and it ran 4px to 243px with a median of 55 — the same
+   per-page measured value, scattered the same way.
+
+   Only the FIRST block can be touched. Every .rich-text on the page carries an
+   inline margin-top, and together they are the site's entire vertical rhythm;
+   stripping them all would collapse the body. So the stripper takes the one
+   immediately after the card and nothing else.
+
+   Three shapes cover all 280 pages: 277 have an anchor div between the card and
+   the first block, two have the block directly, and the Part pages have a
+   menu-band. */
+
+.toc-card + .anchor + .rich-text,
+.toc-card + .rich-text,
+.toc-card + .menu-band { margin-top: 28px; }
+
+body[data-menu-pos] .tc-cat { border-bottom-color: var(--anchor); color: var(--ink); }
+body[data-menu-pos] .ts-cat { border-bottom-color: var(--anchor); color: var(--ink); }
+body[data-menu-pos] .ts-head.here { border-left-color: var(--anchor); color: var(--anchor); }
+body[data-menu-pos] .tc-list li::before { color: var(--anchor); }
+
+/* ---- 4. The logo --------------------------------------------------------
+   Left alone, deliberately. There was a recolour here — a gradient blended over
+   the artwork in `color` mode — and it is gone. The file was never touched
+   either way, so the logo is exactly as it shipped.                         */
+
+/* ---- fallbacks — not optional -------------------------------------------
+   An engine without background-clip: text renders transparent text on white,
+   so every swept element would vanish rather than fall back to a colour. */
+
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .page-title, .page-title span, .page-title a,
+  .site-title__main, .site-title__sub { color: #0A2E6E; }
+}
+@media print {
+  .page-title, .site-title__main,
+  .site-title__sub { background-image: none; color: var(--title-ink); }
+}
