@@ -24,7 +24,12 @@
   --p1-anchor:#05893E; --p1-tint:#CCF2D2; --p1-wash:#E7FBEA; --p1-ink:#124020;
   --p2-anchor:#2A69C3; --p2-tint:#D9E7FD; --p2-wash:#ECF5FF; --p2-ink:#1B355B;
   --p3-anchor:#AD4586; --p3-tint:#FFDAEE; --p3-wash:#FFEFF7; --p3-ink:#50243E;   /* magenta — swapped with Part 7 */
-  --p4-anchor:#977E0D; --p4-tint:#F2E7BB; --p4-wash:#FBF5DE; --p4-ink:#423400;   /* olive  — swapped with Part 6 */
+  --p4-anchor:#977E0D; --p4-tint:rgba(229,220,177,.65); --p4-wash:rgba(241,231,165,.32); --p4-ink:#423400;   /* olive — swapped with Part 6;
+     the band and the card are both translucent pastel yellow now, matching the site's
+     own card idiom (--card-tint is rgba green at .30). Over white the band reads
+     #EEE8CC and the card #FBF8E3. The band keeps the same lightness as every other
+     Part's band (L .928) so Part 4 does not go faint next to its neighbours; what
+     changed is chroma, .058 down to .038, and the hue off the sandy olive. */
   --p5-anchor:#7249AD; --p5-tint:#EAE1FD; --p5-wash:#F6F2FF; --p5-ink:#3C2B56;
   --p6-anchor:#10A6AD; --p6-tint:#B9F3F5; --p6-wash:#DEFBFC; --p6-ink:#003E41;   /* teal   — swapped with Part 4 */
   --p7-anchor:#C35327; --p7-tint:#FEDED4; --p7-wash:#FFF0EB; --p7-ink:#552615;   /* orange  — swapped with Part 3 */
@@ -35,7 +40,7 @@
   --p8-anchor:#5E6A78; --p8-tint:#E0E7EF; --p8-wash:#F0F5FA; --p8-ink:#2D3640;
 
   /* card edges — the 1px border on a shaded TOC group */
-  --p1-edge:#96CEA1; --p2-edge:#9CC0F5; --p3-edge:#E6A8CA; --p4-edge:#CFBE7E;
+  --p1-edge:#96CEA1; --p2-edge:#9CC0F5; --p3-edge:#E6A8CA; --p4-edge:rgba(219,211,158,.55);
   --p5-edge:#C6B2ED; --p6-edge:#77CFD3; --p7-edge:#EEAC94; --p8-edge:#B6BFC8;
 }
 
@@ -52,14 +57,14 @@
 /* ---- 1. Home page vertical contents menu -------------------------------- */
 
 /* the PART rows become named headers with a rule in their own colour */
-.contents-nav > ul > li.cn-part { height: auto; margin: 15px 0 4px; }
+.contents-nav > ul > li.cn-part { height: auto; margin: 24px 0 8px; }   /* was 15/4, opened up for the 29px rows */
 .contents-nav > ul > li.cn-part:first-child { margin-top: 0; }
 .contents-nav > ul > li.cn-part > a {
   height: auto;
   padding: 0 0 3px;
   background: none;
   border-bottom: 2px solid var(--anchor);
-  font: 600 10.5px/1.4 var(--font-sans);
+  font: 600 12px/1.4 var(--font-sans);
   letter-spacing: .9px;
   text-transform: uppercase;
   color: var(--ink);
