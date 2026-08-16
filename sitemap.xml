@@ -66,6 +66,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://procedure.tax/A11-Registration-of-tax-advisers.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://procedure.tax/B-Returns-and-registration.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
