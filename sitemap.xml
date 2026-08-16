@@ -286,6 +286,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://procedure.tax/E07-Uncertain-tax-treatment.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://procedure.tax/F-Enquiries-and-corrections.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
