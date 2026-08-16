@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>procedure.tax — tranche 1, before and after (v2)</title>
+<style>
+:root{--ink:#1a1a1a;--muted:#5f6368;--line:#e3e1dc;--bg:#faf9f7;--card:#fff;
+--crit:#8B0000;--cit:#331FDD;--cut:#8a2b22;--cutbg:#fdf4f3;--cutline:#e0b8b2;
+--new:#2f5d3a;--newbg:#f1f7f2;--newline:#b6d3bd;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,"Iowan Old Style",serif}
+.sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto}
+header.top{background:var(--card);border-bottom:1px solid var(--line);padding:30px 32px 24px}
+h1{font:600 27px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;margin:0 0 6px;letter-spacing:-.015em}
+.rule{height:3px;width:60px;background:var(--crit);margin:12px 0 16px;border-radius:2px}
+header.top p{font-size:15.5px;margin:0 0 10px;color:#33322f}
+.key{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.key div{padding:8px 13px;border-radius:6px;border:1px solid var(--line);background:var(--bg)}
+.key .k1{background:var(--cutbg);border-color:var(--cutline);color:var(--cut)}
+.key .k2{background:var(--newbg);border-color:var(--newline);color:var(--new)}
+nav.jump{position:sticky;top:0;background:rgba(250,249,247,.96);backdrop-filter:blur(8px);
+ border-bottom:1px solid var(--line);padding:11px 32px;z-index:10}
+nav.jump .wrap{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+nav.jump a{font:600 12.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ text-decoration:none;color:var(--muted);background:var(--card);border:1px solid var(--line);
+ padding:7px 11px;border-radius:999px;white-space:nowrap}
+nav.jump a:hover{border-color:#b9b4aa;color:var(--ink)}
+nav.jump a.hot{color:var(--crit);border-color:#e8cdcb;background:#fbf3f2}
+nav.jump .lbl{font:600 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ color:#9a958b;text-transform:uppercase;letter-spacing:.07em;margin-right:3px}
+main{padding:30px 32px 90px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:9px;margin:0 0 30px;overflow:hidden;scroll-margin-top:66px}
+.f-h{background:#f5f3ef;padding:14px 18px;border-bottom:1px solid var(--line)}
+.f-n{font:700 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--crit);letter-spacing:.07em}
+.f-t{font:600 17.5px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;margin:5px 0 0}
+.f-w{font:13.5px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--muted);margin:6px 0 0}
+.f-b{padding:18px}
+.do{background:#eef4ef;border-left:3px solid var(--new);border-radius:0 6px 6px 0;padding:13px 16px;margin:0 0 18px;
+ color:#2b3d2f;font:14.5px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.do b{color:#1c2a1e}.do ol{margin:8px 0 0 18px;padding:0}.do li{margin-bottom:7px}
+.note{font:13.5px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ color:#57534b;margin:18px 0 0;border-top:1px dotted #d3cfc7;padding-top:11px}
+.note b{color:var(--ink)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.col{border-radius:7px;padding:14px 16px;border:1px solid}
+.col.cut{background:var(--cutbg);border-color:var(--cutline)}
+.col.new{background:var(--newbg);border-color:var(--newline)}
+.col.only{grid-column:1 / -1}
+.col-h{font:700 10.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ letter-spacing:.09em;text-transform:uppercase;margin:0 0 12px}
+.col.cut .col-h{color:var(--cut)}.col.new .col-h{color:var(--new)}
+.cat{font:600 14.5px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ color:var(--crit);text-transform:uppercase;margin:18px 0 8px}.cat:first-child{margin-top:0}
+.sec{font:600 17px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;margin:18px 0 7px}.sec:first-child{margin-top:0}
+.pt{font:600 14.5px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;margin:15px 0 6px}
+.col .pt:first-child,.col .sec:first-child,.col .cat:first-child{margin-top:0}
+.stat,.gloss{margin:0 0 7px 16px;font:15px/1.58 Georgia,serif}
+.xref{margin:0 0 7px 16px;font:14.5px Georgia,serif;color:var(--cit);text-decoration:underline}
+.cit{color:var(--cit)}.cn{color:var(--crit);text-decoration:underline}
+.del{text-decoration:line-through;text-decoration-color:#b4534a;text-decoration-thickness:1.5px;color:#8a2b22}
+.ins{background:#d9efe0;border-radius:2px;padding:0 3px;font-weight:600}
+table.k{width:100%;border-collapse:collapse;margin:10px 0 12px;font:13.5px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+table.k th{text-align:left;border-bottom:1.5px solid #333;padding:6px 10px 6px 0;font-weight:600}
+table.k td{border-bottom:1px solid #e7e3dc;padding:6px 10px 6px 0;vertical-align:top}
+h2.doc{font:600 20px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ margin:46px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--ink);scroll-margin-top:66px}
+h2.doc:first-of-type{margin-top:6px}
+code{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;background:#f1efea;padding:1px 5px;border-radius:3px}
+ul.tight{margin:8px 0 12px 20px;padding:0}ul.tight li{margin-bottom:6px}
+footer.end{max-width:1180px;margin:0 auto;padding:0 32px 70px}
+footer.end>div{border-top:2px solid var(--ink);padding-top:14px;
+ font:14px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#57534b}
+@media(max-width:860px){.cols{grid-template-columns:1fr}header.top,nav.jump,main,footer.end{padding-left:16px;padding-right:16px}}
+@media print{nav.jump{display:none}body{background:#fff;font-size:10.5pt}.f{break-inside:avoid}h2.doc{break-before:page}h2.doc:first-of-type{break-before:auto}.cols{grid-template-columns:1fr 1fr}}
+
+.supply{background:#fdf1e3;border-left:3px solid #a8560d;border-radius:0 5px 5px 0;padding:9px 12px;
+ margin:0 0 10px;font:12.5px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#7a4109}
+.supply b{color:#5c3107}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<h1>procedure.tax — tranche 1, before and after (v2)</h1>
+<div class="rule"></div>
+<p>Rebuilt to house style. Everything inside a dashed box is site content: a heading stating the proposition, then the quotation, and nothing else. The instruction line above each box is review apparatus and does not go on the page.</p>
+<p style="font-size:14.5px;color:#5f6368">Current wording from the master repository; statutory text from the Acts in your Legislation folder, now downloaded. 15 August 2026.</p>
+<div class="key">
+  <div class="k1"><b>Left</b> — text as it stands. Struck-through words go.</div>
+  <div class="k2"><b>Right</b> — what replaces it, in house style.</div>
+  <div><b>Six of the sixteen</b> delete nothing: 8a, 9, 13, 18, 25, 32.</div>
+</div>
+</div></header>
+
+<nav class="jump"><div class="wrap">
+<span class="lbl">Jump to</span>
+<a class="hot" href="#i1">1 · Rule 35</a>
+<a class="hot" href="#i2">2 · CT penalties</a>
+<a href="#i3">3 · VAT surcharge</a>
+<a href="#i5">5 · 14 years</a>
+<a href="#i6">6 · VAT thresholds</a>
+<a href="#i7">7 · CIS</a>
+<a href="#i16">16 · Cox</a>
+<a href="#i30">30–31 · Citations</a>
+<a href="#corr">Corrections found</a>
+</div></nav>
+
+<main><div class="wrap">
+
+<div class="f" id="corr" style="border-color:#c9a227;background:#fffdf6">
+<div class="f-h" style="background:#fbf6e6;border-color:#e5d8ae">
+<div class="f-n" style="color:#8a6d1b">READ FIRST — WHAT THE RECHECK CHANGED</div>
+<div class="f-t">Four corrections to what I issued before the legislation arrived</div></div>
+<div class="f-b">
+<table class="k" style="margin-left:0;width:100%">
+<tr><th style="width:18%">Item</th><th>Correction</th></tr>
+<tr><td><b>Finding 3</b></td><td>I said VATA 1994 ss.59–59B were "omitted by FA 2021, Sch 27". Imprecise. They are omitted by <b>Sch 27 para 17</b>, and only <b>for specified purposes</b> on three separate dates — 1 January 2023, 6 April 2024 and 1 April 2026 — which is why they still appear in the consolidated text. The commencing instruments are SI 2022/1278 reg 2(3)(4)(a), SI 2024/440 reg 2 and <b>SI 2026/370 reg 3</b>.</td></tr>
+<tr><td><b>Finding 5</b></td><td>My replacement read "fourteen years" in words, because the site had "seven years" in words. FA 2003 s.95(2)(b) as amended uses the numeral — <b>14 years</b>.</td></tr>
+<tr><td><b>Finding 7</b></td><td>I "corrected" FA 2004 s.72A(3) from "final appeal" to "further appeal", assuming a conversion slip. The statute genuinely reads "any appeal or <b>final</b> appeal". My correction was the error. Likewise s.62A(3) opens "a 'connected party' is" with no dash — that is the statute, not an artefact.</td></tr>
+<tr><td><b>Legislation list</b></td><td>Item 15, the 2026 appointed-day instrument I could not identify, is <b>SI 2026/370</b>. It can come off the list.</td></tr>
+</table>
+<div class="note">Rule 35, the CIS provisions, ITEPA ss.61Y and 61Z, the VAT thresholds and FA 2026 s.265 all verified word for word against the Acts. Two commas were missing from my transcription of r.35(2) and s.66(7)(b); both are right below.</div>
+</div></div>
+
+<h2 class="doc">Amendments that replace existing content</h2>
+
+<!-- 1 -->
+<div class="f" id="i1"><div class="f-h">
+<div class="f-n">1 · CRITICAL</div>
+<div class="f-t">R1 Nature of the Tribunal's decision — rule 35</div>
+<div class="f-w">Four quoted blocks and one heading. SI 2026/115, in force 2 March 2026. Consolidated text now verified.</div></div>
+<div class="f-b">
+<div class="do"><b>Do this.</b> Amend three of the four quoted blocks, rename one heading, and add one new head and quotation for r.35(3A). The 28-day period for <i>requesting</i> full findings and reasons is now 14 days.</div>
+
+<div class="cols">
+<div class="col cut"><div class="col-h">Current</div>
+<p class="pt">Opening quotation</p>
+<p class="stat">"(2) The Tribunal must provide to each party <span class="del">within 28 days after making a decision</span> (other than a decision under Part 4) which finally disposes of all issues in proceedings or of a preliminary issue dealt with following a direction under rule 5(3)(e), <span class="del">or as soon as practicable thereafter,</span> a decision notice which-- (a) states the Tribunal's decision; and (b) notifies the party of any right of appeal against the decision and the time within which, and the manner in which, the right of appeal may be exercised." <span class="cit">(FTT Rules, r.35(2))</span></p>
+<p class="pt">Full reasons (necessary to appeal)</p>
+<p class="stat">"(3) <span class="del">Unless each party agrees that it is unnecessary, the</span> decision notice must-- (a) include a summary of the findings of fact and reasons for the decision; or (b) be accompanied by full written findings of fact and reasons for the decision." <span class="cit">(FTT Rules, r.35(3))</span></p>
+<p class="pt"><span class="del">- Must apply for full reasons within 28 days</span></p>
+<p class="stat">"(5) An application under paragraph (4) must be made in writing and be sent or delivered to the Tribunal so that it is received <span class="del">within 28 days</span> after the date that the Tribunal sent or otherwise provided the decision notice under paragraph (2) to the party making the application." <span class="cit">(FTT Rules, r.35(5))</span></p>
+</div>
+
+<div class="col new"><div class="col-h">Replacement</div>
+<p class="pt">Decision notice as soon as reasonably practicable</p>
+<p class="stat">"(2) The Tribunal must provide to each party<span class="ins">, as soon as reasonably practicable</span> after making a decision (other than a decision under Part 4) which finally disposes of all issues in proceedings or of a preliminary issue dealt with following a direction under rule 5(3)(e), a decision notice which—</p>
+<p class="stat">(a) states the Tribunal's decision; and</p>
+<p class="stat">(b) notifies the party of any right of appeal against the decision and the time within which, and the manner in which, the right of appeal may be exercised." <span class="cit">(FTT Rules, r.35(2))</span></p>
+<p class="pt">Summary findings, or full written findings, with the decision notice</p>
+<p class="stat">"(3) <span class="ins">The</span> decision notice must—</p>
+<p class="stat">(a) include a summary of the findings of fact and reasons for the decision; or</p>
+<p class="stat">(b) be accompanied by full written findings of fact and reasons for the decision." <span class="cit">(FTT Rules, r.35(3))</span></p>
+<p class="pt">- No summary or full findings required where reasons given orally at the hearing</p>
+<p class="stat"><span class="ins">"(3A) Paragraph (3) does not apply where the Tribunal has given reasons for the decision, whether summary or full, orally at a hearing."</span> <span class="cit">(FTT Rules, r.35(3A))</span></p>
+<p class="pt">- Must apply for full reasons within <span class="ins">14 days</span></p>
+<p class="stat">"(5) An application under paragraph (4) must be made in writing and be sent or delivered to the Tribunal so that it is received within <span class="ins">14 days</span> after the date that the Tribunal sent or otherwise provided the decision notice under paragraph (2) to the party making the application." <span class="cit">(FTT Rules, r.35(5))</span></p>
+<p class="pt">- Full statement of findings and reasons as soon as reasonably practicable</p>
+<p class="stat">"(6) The Tribunal must send a full written statement of findings and reasons to each party <span class="ins">as soon as reasonably practicable</span> after receiving an application for full written reasons made in accordance with paragraphs (4) and (5)." <span class="cit">(FTT Rules, r.35(6))</span></p>
+</div></div>
+
+<div class="note"><b>Leave alone.</b> The quotation of r.35(4) is unamended. The passage at [52]–[55] under "- FTT accepting late request for full reasons despite no good reasons for delay" refers throughout to 28 days, but that is the judge speaking about the rule as it then stood.<br><br><b>Consequential at R4.</b> Add a head and cross-reference: <i>"- Time limit for applying for full findings and reasons"</i> → <i>"See R1: Nature of the Tribunal's decision"</i>.</div>
+</div></div>
+
+<!-- 2 -->
+<div class="f" id="i2"><div class="f-h">
+<div class="f-n">2 · CRITICAL</div>
+<div class="f-t">X4 Penalties for late return — late company tax return</div>
+<div class="f-w">"LATE COMPANY TAX RETURN" → "- Fixed penalty for initial default". FA 2026 s.265, verified.</div></div>
+<div class="f-b">
+<div class="do"><b>Do this.</b> Four figures change inside the quotation; sub-paragraphs (5) to (7) are added to it. Two new heads follow, each with its own quotation.</div>
+<div class="cols">
+<div class="col cut"><div class="col-h">Current</div>
+<p class="stat">"(2) The penalty is—</p>
+<p class="stat">(a) <span class="del">£100</span>, if the return is delivered within three months after the filing date, and</p>
+<p class="stat">(b) <span class="del">£200</span>, in any other case.</p>
+<p class="stat">(3) The amounts are increased to <span class="del">£500</span> and <span class="del">£1000</span> for a third successive failure, that is, where—" <span class="cit">(FA 1998, Sch 18, para 17)</span></p>
+</div>
+<div class="col new"><div class="col-h">Replacement</div>
+<p class="stat">"(2) The penalty is—</p>
+<p class="stat">(a) <span class="ins">£200</span>, if the return is delivered within three months after the filing date, and</p>
+<p class="stat">(b) <span class="ins">£400</span>, in any other case.</p>
+<p class="stat">(3) The amounts are increased to <span class="ins">£1000</span> and <span class="ins">£2000</span> for a third successive failure, that is, where—" <span class="cit">(FA 1998, Sch 18, para 17)</span></p>
+<p class="pt">- Commissioners may vary the amounts by regulations</p>
+<p class="stat">"(5) The Commissioners for His Majesty's Revenue and Customs may by regulations amend sub-paragraph (2) or (3) so as to increase or decrease the amount of a penalty for the time being specified in those sub-paragraphs.</p>
+<p class="stat">(6) Regulations under sub-paragraph (5) may include transitional and saving provision.</p>
+<p class="stat">(7) A statutory instrument containing regulations under sub-paragraph (5) which increase the amount of a penalty by more than is necessary to reflect changes in the value of money may not be made unless a draft of the instrument has been laid before and approved by a resolution of the House of Commons." <span class="cit">(FA 1998, Sch 18, para 17)</span></p>
+<p class="pt">- Increased amounts apply where the filing date is on or after 1 April 2026</p>
+<p class="stat">"(2) The amendments made by subsection (1)(a) and (b) have effect in relation to a failure to deliver a company tax return for which the filing date is on or after 1 April 2026." <span class="cit">(FA 2026, s.265(2))</span></p>
+</div></div>
+</div></div>
+
+<!-- 3 -->
+<div class="f" id="i3"><div class="f-h">
+<div class="f-n">3 · CRITICAL</div>
+<div class="f-t">X4 Penalties for late return — the VAT sub-section</div>
+<div class="f-w">"VAT". Corrected: ss.59–59B omitted for specified purposes by FA 2021 Sch 27 para 17.</div></div>
+<div class="f-b">
+<div class="do"><b>Do this.</b> Replace the surcharge heading with one recording the omission, and add cross-references to the chapters where the replacement regimes are treated. FA 2021 is not in the folder, so Sch 24 and Sch 26 cannot yet be quoted here — the cross-references carry the reader in the meantime.</div>
+<div class="cols">
+<div class="col cut"><div class="col-h">Current</div>
+<p class="cat">VAT</p>
+<p class="pt"><span class="del">- Late VAT return or payment: default surcharge regime</span></p>
+<p class="xref">VATA 1994, s.59 - 59B</p>
+<p class="pt">- Late EC sales statement</p>
+<p class="xref">VATA 1994, s.66</p>
+</div>
+<div class="col new"><div class="col-h">Replacement</div>
+<p class="cat">VAT</p>
+<p class="pt">- Late VAT return: penalty point and £200 penalty</p>
+<p class="xref">See X3: New penalties for no return</p>
+<p class="pt">- Late payment of VAT</p>
+<p class="xref">See X5: Penalties for late payment</p>
+<p class="pt">- Default surcharge omitted for prescribed accounting periods beginning on or after 1 January 2023</p>
+<p class="stat">"Ss. 59-59B omitted (1.1.2023 for specified purposes, 6.4.2024 for specified purposes, 1.4.2026 for specified purposes) by virtue of Finance Act 2021 (c. 26), s. 118(2), Sch. 27 para. 17; S.I. 2022/1278, reg. 2(3)(4)(a); S.I. 2024/440, reg. 2; S.I. 2026/370, reg. 3" <span class="cit">(VATA 1994, ss.59 - 59B, textual amendments)</span></p>
+<p class="pt">- Late EC sales statement</p>
+<p class="xref">VATA 1994, s.66</p>
+</div></div>
+<div class="note"><b>On the surcharge material already on the page.</b> It remains correct for prescribed accounting periods beginning before 1 January 2023 and should be kept, under a heading saying so. The proportionality authorities decided under it — <i>Total Technology</i> and <i>Trinity Mirror</i> — would sit better in X1.</div>
+</div></div>
+
+<!-- 5 -->
+<div class="f" id="i5"><div class="f-h">
+<div class="f-n">5 · CRITICAL</div>
+<div class="f-t">Y1 Fraud offences — maximum sentences</div>
+<div class="f-w">Every sentencing quotation. FA 2024 s.32, verified against FA 2003 s.95 as amended.</div></div>
+<div class="f-b">
+<div class="do"><b>Do this.</b> One numeral in each quotation — and note the statute uses "14", not "fourteen". Then one new head with the amendment note, which carries the commencement rule.</div>
+<div class="cols">
+<div class="col cut"><div class="col-h">Current</div>
+<p class="stat">"(b) on conviction on indictment, to imprisonment for a term not exceeding <span class="del">7 years</span> or a fine, or both." <span class="cit">(TMA 1970, s.106A)</span></p>
+<p class="stat">"(b) on conviction on indictment, to imprisonment for a term not exceeding <span class="del">seven years</span> or a fine, or both." <span class="cit">(FA 2003, s.95)</span></p>
+</div>
+<div class="col new"><div class="col-h">Replacement</div>
+<p class="stat">"(b) on conviction on indictment, to imprisonment for a term not exceeding <span class="ins">14</span> years or a fine, or both." <span class="cit">(TMA 1970, s.106A)</span></p>
+<p class="stat">"(b) on conviction on indictment, to imprisonment for a term not exceeding <span class="ins">14</span> years or a fine, or both." <span class="cit">(FA 2003, s.95)</span></p>
+<p class="pt">- Maximum increased from 7 years for offences committed on or after 22 February 2024</p>
+<p class="stat">"Word in s. 95(2)(b) substituted (22.2.2024) by Finance Act 2024 (c. 3), s. 32(1) (with s. 32(6))" <span class="cit">(FA 2003, s.95, textual amendments)</span></p>
+</div></div>
+<div class="note"><b>TMA 1970 is not in the folder</b>, so the s.106A wording above follows the pattern of s.95 as amended rather than the section itself. Worth confirming before it goes up. The "VAT fraud" heading on this page still has no sentence stated under it at all.</div>
+</div></div>
+
+<!-- 6 -->
+<div class="f" id="i6"><div class="f-h">
+<div class="f-n">6 · CRITICAL</div>
+<div class="f-t">B10 VAT registration — thresholds</div>
+<div class="f-w">Threshold headings reading "1 April 2017 to present". Verified: VATA Sch 1 para 1.</div></div>
+<div class="f-b">
+<div class="do"><b>Do this.</b> Close the 2017 line, add a 2024 line, and add a head with the amended provision quoted.</div>
+<div class="cols">
+<div class="col cut"><div class="col-h">Current</div>
+<p class="stat"><span class="del">1 April 2017 to present: £85,000</span></p>
+<p class="stat"><span class="del">1 April 2017 to present: £83,000</span></p>
+</div>
+<div class="col new"><div class="col-h">Replacement</div>
+<p class="stat"><span class="ins">1 April 2017 to 31 March 2024: £85,000</span></p>
+<p class="stat"><span class="ins">1 April 2024 to present: £90,000</span></p>
+<p class="stat"><span class="ins">1 April 2017 to 31 March 2024: £83,000</span></p>
+<p class="stat"><span class="ins">1 April 2024 to present: £88,000</span></p>
+<p class="pt">- Liability to register where taxable supplies exceed £90,000</p>
+<p class="stat">"(a) at the end of any month, if the person is UK-established and the value of his taxable supplies in the period of one year then ending has exceeded £90,000; or</p>
+<p class="stat">(b) at any time, if the person is UK-established and there are reasonable grounds for believing that the value of his taxable supplies in the period of 30 days then beginning will exceed £90,000." <span class="cit">(VATA 1994, Sch 1, para 1(1))</span></p>
+<p class="pt">- Cessation of liability where supplies will not exceed £88,000</p>
+<p class="stat">"a person who has become liable to be registered under this Schedule shall cease to be so liable at any time after being registered if the Commissioners are satisfied that the value of his taxable supplies in the period of one year then beginning will not exceed £88,000." <span class="cit">(VATA 1994, Sch 1, para 4(1))</span></p>
+</div></div>
+<div class="note">The Sch 9ZA acquisitions thresholds were raised to £90,000 by the same instrument, with effect from 1 April 2024. Worth searching the chapter for "£85,000" and "£83,000".</div>
+</div></div>
+
+<!-- 7 -->
+<div class="f" id="i7"><div class="f-h">
+<div class="f-n">7 · CRITICAL</div>
+<div class="f-t">V14 Construction industry scheme — cancellation of gross payment status</div>
+<div class="f-w">"- No re-registering for 1 year after cancellation". FA 2026 s.220, verified.</div></div>
+<div class="f-b">
+<div class="do"><b>Do this.</b> The page quotes <b>s.66(8)</b>, which is now omitted. One head becomes three, each with its own subsection.</div>
+<div class="cols">
+<div class="col cut"><div class="col-h">Current</div>
+<p class="pt"><span class="del">- No re-registering for 1 year after cancellation</span></p>
+<p class="stat"><span class="del">"(8) A person whose registration for gross payment is cancelled under this section may not, within the period of one year after the cancellation takes effect (see subsections (2) and (4) and section 67(5)), apply for registration for gross payment." (FA 2004, s.66(8))</span></p>
+</div>
+<div class="col new"><div class="col-h">Replacement</div>
+<p class="pt">- Cancellation where s.62A or s.62B applies</p>
+<p class="stat">"(3A) The Commissioners may at any time make a determination cancelling a person's registration for gross payment if—</p>
+<p class="stat">(a) section 62A (payments made in the knowledge of deliberate failures to comply), or</p>
+<p class="stat">(b) section 62B (returns made in the knowledge of deliberate failures to comply),</p>
+<p class="stat">applies to the person." <span class="cit">(FA 2004, s.66(3A))</span></p>
+<p class="pt">- No re-registering for 1 year where cancellation is under s.66(1)</p>
+<p class="stat">"(6) Where a person's registration for gross payment is cancelled by virtue of a determination under subsection (1),</p>
+<p class="stat">(a) the person must be registered for payment under deduction, and</p>
+<p class="stat">(b) the person may not, within the period of one year beginning with the day on which the cancellation takes effect (see subsection (2) and section 67(5)), apply for registration for gross payment." <span class="cit">(FA 2004, s.66(6))</span></p>
+<p class="pt">- No re-registering for 5 years where cancellation is under s.66(3) or (3A)</p>
+<p class="stat">"(7) Where a person's registration for gross payment is cancelled by virtue of a determination under subsection (3) or subsection (3A),</p>
+<p class="stat">(a) the person may, if the Commissioners think fit, be registered for payment under deduction, and</p>
+<p class="stat">(b) the person may not, within the period of <span class="ins">five years</span> beginning with the day on which the cancellation takes effect (see subsection (4)), apply for registration for gross payment." <span class="cit">(FA 2004, s.66(7))</span></p>
+</div></div>
+
+<div class="cols" style="margin-top:14px"><div class="col new only"><div class="col-h">New category section — nothing deleted</div>
+<p class="cat">LIABILITY FOR DELIBERATE FAILURES BY A CONNECTED PARTY</p>
+<p class="pt">Payment made knowing a connected party had failed or would fail to comply</p>
+<p class="stat">"(1) This section applies to a person who—</p>
+<p class="stat">(a) has made a payment under a construction contract, and</p>
+<p class="stat">(b) before making a payment, knew or should have known that a connected party had deliberately failed, or would deliberately fail, to comply with a requirement to—</p>
+<p class="stat">(i) deduct a sum under section 61,</p>
+<p class="stat">(ii) pay a sum to the Commissioners under section 62, or</p>
+<p class="stat">(iii) deduct or pay an amount to His Majesty's Revenue and Customs under PAYE regulations." <span class="cit">(FA 2004, s.62A(1))</span></p>
+<p class="pt">- Liability of 20% of the payment</p>
+<p class="stat">"(2) If this section applies, an officer of Revenue and Customs may determine that the person is liable to pay to the Commissioners an amount equal to 20% of the payment referred to in subsection (1)." <span class="cit">(FA 2004, s.62A(2))</span></p>
+<p class="pt">- Connected party includes a party to another contract for the same construction operations</p>
+<p class="stat">"(3) In this section, a "connected party" is</p>
+<p class="stat">(a) another party to the construction contract referred to in subsection (1)(a), or</p>
+<p class="stat">(b) a party to another construction contract relating to the same construction operations as the construction contract referred to in subsection (1)(a)." <span class="cit">(FA 2004, s.62A(3))</span></p>
+<p class="pt">Return treating a sum as deducted and paid, knowing it was not</p>
+<p class="stat">"(1) This section applies to a person who—</p>
+<p class="stat">(a) makes a return which treats a sum as deducted and paid on account of the person's liabilities under section 62(2) or (3), and</p>
+<p class="stat">(b) before doing so, knew or should have known that the sum—</p>
+<p class="stat">(i) had not been deducted, or</p>
+<p class="stat">(ii) had deliberately not been, or would deliberately not be, paid on account of the person's liabilities.</p>
+<p class="stat">(2) If this section applies, an officer of Revenue and Customs may determine that the person is liable to pay to the Commissioners an amount equal to the sum which the return treats as paid on account of the person's liabilities." <span class="cit">(FA 2004, s.62B)</span></p>
+<p class="pt">- Regulations for determination, collection and recovery</p>
+<p class="stat">"The Commissioners may make regulations with respect to the determination, collection and recovery of amounts described in sections 62A(2) and 62B(2)." <span class="cit">(FA 2004, s.62C)</span></p>
+<p class="pt">Penalty not exceeding 30% of the amount determined</p>
+<p class="stat">"(1) A person is liable to a penalty not exceeding 30% of any amount that they are determined to be liable to pay under section 62A (payments made in the knowledge of deliberate failures to comply) or 62B (returns made in the knowledge of deliberate failures to comply)." <span class="cit">(FA 2004, s.72A(1))</span></p>
+<p class="pt">- Three years from the determination becoming final</p>
+<p class="stat">"(2) A penalty under this section may not be determined more than three years after the date on which the determination under section 62A or 62B becomes final.</p>
+<p class="stat">(3) For the purposes of subsection (2) and section 72B(3), a determination becomes final at the time when the period for any appeal or further appeal relating to the determination expires or, if later, when any appeal or final appeal relating to the penalty is finally determined.</p>
+<p class="stat">(4) Section 103(4) TMA 1970 (time limits) does not apply to a penalty under this section." <span class="cit">(FA 2004, s.72A(2)-(4))</span></p>
+<p class="pt">Officer of a company liable for such portion of the penalty as the Commissioners specify</p>
+<p class="stat">"(1) Where—</p>
+<p class="stat">(a) a company is liable to a penalty under section 72A, and</p>
+<p class="stat">(b) the actions of the company which give rise to that liability were attributable to an officer of the company,</p>
+<p class="stat">the officer is liable to pay such portion of the penalty (which may be equal to or less than 100%) as the Commissioners may specify in a notice given to the officer (a "decision notice")." <span class="cit">(FA 2004, s.72B(1))</span></p>
+<p class="pt">- Representations before a decision notice is given</p>
+<p class="stat">"(2) Before giving the officer a decision notice, the Commissioners must—</p>
+<p class="stat">(a) inform the officer that they are considering doing so, and</p>
+<p class="stat">(b) afford the officer the opportunity to make representations about whether a decision notice should be given or the portion that should be specified." <span class="cit">(FA 2004, s.72B(2))</span></p>
+<p class="pt">- Decision notice only after the company's penalty is determined, and within three years</p>
+<p class="stat">"(3) A decision notice—</p>
+<p class="stat">(a) may not be given before the amount of the penalty due from the company has been determined (but it may be given immediately after that has happened), and</p>
+<p class="stat">(b) may not be given more than three years after the date on which the determination mentioned in section 72A(1) becomes final." <span class="cit">(FA 2004, s.72B(3))</span></p>
+<p class="pt">- Payment within 30 days, recoverable as tax</p>
+<p class="stat">"(4) Where the Commissioners have specified a portion of the penalty in a decision notice given to the officer—</p>
+<p class="stat">(a) the officer must pay the specified portion before the end of the period of 30 days beginning with the day on which the notice is given,</p>
+<p class="stat">(b) the specified portion shall be recoverable as if it were tax due from the officer, and</p>
+<p class="stat">(c) a further decision notice may be given in respect of a portion of any additional penalty for which the company is determined to be liable." <span class="cit">(FA 2004, s.72B(4))</span></p>
+<p class="pt">- No more than 100% recoverable through decision notices</p>
+<p class="stat">"(5) The Commissioners may not recover more than 100% of the penalty through issuing decision notices …" <span class="cit">(FA 2004, s.72B(5))</span></p>
+</div></div>
+<div class="note"><b>Leave alone.</b> Under "Purpose is deterrence" the page quotes a judgment at [34] referring to "s 66(8) FA 2004" and to one year. That is the judge's language.</div>
+</div></div>
+
+<!-- 16 -->
+<div class="f" id="i16"><div class="f-h">
+<div class="f-n">16 · HIGH</div>
+<div class="f-t">X9 Special circumstances and suspension — Cox</div>
+<div class="f-w">Three citations of the FTT decision.</div></div>
+<div class="f-b">
+<div class="do"><b>Do this.</b> Keep the FTT passage — it is a fair statement of the position as it then stood. Add heads beneath it for the Upper Tribunal's answer. The judgment is not in the folder, so the quotations cannot be drafted yet.</div>
+<div class="cols">
+<div class="col cut"><div class="col-h">Current — retain</div>
+<p class="stat">"[290] The tribunal agrees with the Testa Tribunal at [32] that the use of the word 'further' in paragraph 14(3) implies a link between the type of inaccuracy for which the original penalty has been levied and the type of inaccuracy which might give rise to further penalties and with the Fane Tribunal and the Webb Tribunal decisions that a 'one off' error would not normally be suitable for a suspended penalty." <span class="cn">(Cox v. HMRC [2024] UKFTT 510 (TC), Judge Gemmell)</span></p>
+</div>
+<div class="col new"><div class="col-h">Add beneath</div>
+<p class="pt">- "Further" does not import a requirement that the future inaccuracy be similar</p>
+<div class="supply" style="margin-left:0"><b>QUOTATION NEEDED</b> — <i>Philip and Debra Cox v HMRC</i> [2026] UKUT 7 (TCC), the passage construing para 14(3).</div>
+<p class="pt">- One-off error not automatically unsuitable for suspension</p>
+<div class="supply" style="margin-left:0"><b>QUOTATION NEEDED</b> — same decision.</div>
+<p class="pt">- Condition must do more than require accurate returns</p>
+<div class="supply" style="margin-left:0"><b>QUOTATION NEEDED</b> — same decision, on para 14(6).</div>
+</div></div>
+<div class="note">Once the UT quotations are in, the three propositions currently sourced to the FTT decision should be re-sourced to it, and the heading "- Link to avoiding similar inaccuracies just a factor" re-cast.</div>
+</div></div>
+
+<!-- 30-31 -->
+<div class="f" id="i30"><div class="f-h">
+<div class="f-n">30 AND 31 · LOW</div>
+<div class="f-t">Two citation corrections</div></div>
+<div class="f-b">
+<div class="cols">
+<div class="col cut"><div class="col-h">Current</div>
+<p class="stat"><span class="del">(Delphi Derivatives Limited v. HMRC [2026] UKUT 21 (TC))</span></p>
+<p class="stat"><span class="del">Perrin v HMRC UKUT 156 (TCC)</span></p>
+</div>
+<div class="col new"><div class="col-h">Replacement</div>
+<p class="stat"><span class="cn">(Delphi Derivatives Limited v. HMRC [2026] UKUT 21 <span class="ins">(TCC)</span>)</span></p>
+<p class="stat"><span class="cn">Perrin v<span class="ins">.</span> HMRC <span class="ins">[2018]</span> UKUT 156 (TCC)</span></p>
+</div></div>
+</div></div>
+
+<h2 class="doc">Amendments that delete nothing</h2>
+<div class="f"><div class="f-h">
+<div class="f-n">8a, 9, 13, 18, 25, 32 · ADDITIONS ONLY</div>
+<div class="f-t">Nothing on the page is removed</div></div>
+<div class="f-b">
+<div class="cols"><div class="col new only"><div class="col-h">What is added, and where</div>
+<table class="k" style="margin-left:0;width:100%">
+<tr><th>#</th><th>Chapter</th><th>Addition</th></tr>
+<tr><td>8a</td><td>U3 Repayment supplement</td><td>A head recording that s.79 is omitted for periods beginning on or after 1 January 2023, with the textual amendment note quoted, and a cross-reference to repayment interest. Blocked on FA 2021 and FA 2009, neither in the folder.</td></tr>
+<tr><td>9</td><td>A11 (new chapter)</td><td>Registration of tax advisers — drafted in full and sent separately.</td></tr>
+<tr><td>13</td><td>V12 PAYE</td><td>New "Umbrella companies" category section on ITEPA 2003 ss.61Y–61Z2, all four sections now verified.</td></tr>
+<tr><td>18</td><td>X3 New penalties for no return</td><td>A scope and commencement section. Needs FA 2021 Sch 24 and the appointed-day instruments, of which SI 2026/370 is now identified.</td></tr>
+<tr><td>25</td><td>V14 CIS</td><td>Head and quotation for the VAT limb of the compliance test — "(v) to account for or pay VAT as required by or under the Value Added Tax Act 1994, and" — verified in Sch 11 paras 4, 8 and 12.</td></tr>
+<tr><td>32</td><td>X3 and X4</td><td>One cross-reference line each: "See A3: Reasonable excuse".</td></tr>
+</table>
+</div></div>
+</div></div>
+
+</div></main>
+<footer class="end"><div>
+<p><b>15 August 2026.</b> Site content is confined to the dashed boxes: heading, then quotation. Statutory text verified against the Acts in the Legislation folder. Still outstanding: TMA 1970, FA 1998, FA 2007, FA 2008, FA 2009, FA 2012, FA 2021, FA 2024, and the statutory instruments — with SI 2026/807, Sch 20 and Sch 21 the most pressing.</p>
+</div></footer>
+
+</body>
+</html>
