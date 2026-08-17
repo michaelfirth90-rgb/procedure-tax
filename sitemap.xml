@@ -516,6 +516,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://procedure.tax/I16-Anti-avoidance-information-notices.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://procedure.tax/J-Procedure-for-challenging-decisions.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1497,6 +1502,11 @@
   </url>
   <url>
     <loc>https://procedure.tax/X10-Follower-notices.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://procedure.tax/X11-Promotion-of-tax-avoidance.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
