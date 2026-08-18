@@ -202,9 +202,73 @@ body[data-menu-pos] .ts-head.here { border-left-color: var(--anchor); color: var
 body[data-menu-pos] .tc-list li::before { color: var(--anchor); }
 
 /* ---- 4. The logo --------------------------------------------------------
-   Left alone, deliberately. There was a recolour here — a gradient blended over
-   the artwork in `color` mode — and it is gone. The file was never touched
-   either way, so the logo is exactly as it shipped.                         */
+   The sweep is now IN the artwork, not blended over it by CSS.
+
+   The old approach was a gradient laid over the image in `color` blend mode.
+   That is gone and is not coming back: it tints whatever the artwork happens to
+   be, so the result depended on the source pixels rather than on the sweep, and
+   it could not put a colour anywhere the artwork was neutral.
+
+   logo.png is repainted from the same two ends this file already owns —
+   #0A2E6E to #1F712F — carried past the green to #2FAA47 at the tip so the
+   right-hand side lifts rather than dying into the dark. Three things are worth
+   recording, because none of them is recoverable from looking at the file:
+
+   1. The ramp is normalised over the MARK's extent, not the image's bounding
+      box. The mark is a ring inscribed in a 246x192 frame, so over the box it
+      would show only the middle of the ramp and reach neither end — the same
+      mistake `width: fit-content` fixes for the swept text above.
+
+   2. A glint follows the ring at 214 degrees, a weaker one at 318, and one
+      point sits on the crossbar. They are arcs rather than round speculars
+      because an arc still reads once the logo is scaled to 123px; a small dot
+      dissolves.
+
+   3. The T's stem was 7.6px longer than the ring's radius, so it hung below the
+      circle. The outer edge is now snapped to a true circle — least-squares fit
+      to the ring's outer boundary, sampling every degree but skipping the
+      sector the stem occupies so the stem could not drag the fit: centre
+      (121.78, 94.07), R 48.76, mean residual 1.06px. That both squares off the
+      stem and guarantees the silhouette is circular. The only other ink outside
+      that circle was about 1px of antialiasing on the arc terminals, which is
+      left alone — clipping it would blunt the gaps the mark is built on.
+
+   4. THE MARK IS NOW GEOMETRY, NOT PIXELS. The source was a 246x192 raster with
+      about 1.3px of softness on every edge, and nothing done to those pixels
+      fixes that: sharpening follows the source's own grid and leaves a
+      staircase, and smoothing the traced contour turns the staircase into
+      ripples. Both were tried. So the mark was measured and redrawn — it is
+      only two arcs and two bars — as a signed distance field, which means
+      coverage is computed analytically and the antialiasing is exact at any
+      size. The values, in the source's own 246x192 coordinates:
+
+        ring     centre (121.78, 94.07), R_in 36.5, R_out 49.5
+        gaps     66.75..109.50 deg   bottom, the stem passes through it
+                 308.75..354.00 deg  upper right, the crossbar passes through
+        crossbar spine y 75, x 85..159, radius 6 (so 79..165 with its caps)
+        stem     x 118..130, from the crossbar down to the outer circle
+
+      The gaps were measured with the two bars masked out, otherwise a bar
+      crossing the ring band reads as ring and splits one gap into two. A third
+      gap appears at 191.75..223.00 on that measurement — that is where the
+      crossbar's left end merges into the ring, not a gap in the drawn ring, so
+      it is not cut. Redrawn against the source, 62,662 pixels agree and the
+      disagreement is a one-pixel edge fringe.
+
+      The bevel is analytic too, off the distance field, so it lands on the bars
+      as well as the ring. Regenerate by re-running the measurements above if
+      the artwork is ever replaced.
+
+   logo.png is 492x384 — four times the 123x96 box rather than two, which is
+   what the density is for; the box is unchanged, so it is still a drop-in.
+
+   favicon.ico (16/32/48/64, each frame rendered at its own size) and
+   apple-touch-icon.png (180) are generated from the same master, so the tab and
+   the home screen match the header instead of drifting from it.
+
+   The frame, the 246x192 size and the 123x96 box are all unchanged, so this is
+   a drop-in: nothing in proceduretax.css needed touching. The previous artwork
+   is in git if the recolour is ever unwanted.                               */
 
 /* ---- fallbacks — not optional -------------------------------------------
    An engine without background-clip: text renders transparent text on white,

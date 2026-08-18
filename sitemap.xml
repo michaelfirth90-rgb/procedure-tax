@@ -66,7 +66,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://procedure.tax/A11-Registration-of-tax-advisers.html</loc>
+    <loc>https://procedure.tax/E09-Registration-of-tax-advisers.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -296,7 +296,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://procedure.tax/E07-Uncertain-tax-treatment.html</loc>
+    <loc>https://procedure.tax/E10-Uncertain-tax-treatment.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1511,12 +1511,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://procedure.tax/X11-Promotion-of-tax-avoidance.html</loc>
+    <loc>https://procedure.tax/E07-Promotion-of-tax-avoidance.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://procedure.tax/X12-POTAS-stop-and-conduct-notices.html</loc>
+    <loc>https://procedure.tax/E08-POTAS-stop-and-conduct-notices.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
